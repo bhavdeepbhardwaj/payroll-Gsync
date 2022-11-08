@@ -483,8 +483,20 @@ $sal_mo = date_create($sal_dts['month_yr']);
                         <?php } ?>
                         <?php if($sal_dts['install_inc']) {?>
                           <div class="col-lg-3 p-2">
-                              <p class="text-muted mb-1">Installation Incentive</p>
+                              <p class="text-muted mb-1">KW Installation Incentive</p>
                               <h3 class="m-0 mb-1"><?php echo "₹ ".inrFormat($sal_dts['install_inc']); ?></h3>
+                          </div>
+                        <?php } ?>
+                        <?php if($sal_dts['otp_install']) {?>
+                          <div class="col-lg-3 p-2">
+                              <p class="text-muted mb-1">OTP Installed</p>
+                              <h3 class="m-0 mb-1"><?php echo $sal_dts['otp_install']; ?></h3>
+                          </div>
+                        <?php } ?>
+                        <?php if($sal_dts['otp_inc_install']) {?>
+                          <div class="col-lg-3 p-2">
+                              <p class="text-muted mb-1">OTP Installation Incentive</p>
+                              <h3 class="m-0 mb-1"><?php echo "₹ ".inrFormat($sal_dts['otp_inc_install']); ?></h3>
                           </div>
                         <?php } ?>
                         <?php if($sal_dts['adjustment']) {?>

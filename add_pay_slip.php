@@ -211,6 +211,19 @@ if($_SESSION["user_type"] == 3){
                             <label class="form-label">Installed Incentive</label>
                             <input type="text" class="form-control" name="inc_install" id="inc_installed" value="0" autocomplete="off" />
                         </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label">OTP Installed</label>
+                            <input type="text" class="form-control" name="otp_install" id="otp_ins" value="0" autocomplete="off" onchange="calc_installinc_otp();"/>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">OTP Installed Rate</label>
+                            <input type="text" class="form-control" name="otp_install_rate" value="0" id="otp_ins_rate" autocomplete="off" onchange="calc_installinc_otp();"/>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">OTP Installed Incentive</label>
+                            <input type="text" class="form-control" name="otp_inc_install" id="otp_inc_installed" value="0" autocomplete="off" />
+                        </div>
                     </div>
                 </fieldset>
                 <div class="row g-2 justify-content-center align-items-center mt-3">
@@ -282,6 +295,13 @@ if($_SESSION["user_type"] == 3){
         if($("#kw_ins").val() && $("#kw_ins_rate").val() != null){
         var kw_inc = parseFloat($("#kw_ins").val()) * parseFloat($("#kw_ins_rate").val());
         $("#inc_installed").val(kw_inc);
+        }
+    }
+
+    function calc_installinc_otp() {
+        if($("#otp_ins").val() && $("#otp_ins_rate").val() != null){
+        var otp_inc = parseFloat($("#otp_ins").val()) * parseFloat($("#otp_ins_rate").val());
+        $("#otp_inc_installed").val(otp_inc);
         }
     }
 </script>

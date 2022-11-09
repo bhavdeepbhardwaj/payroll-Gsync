@@ -130,7 +130,7 @@ $adv_adj = $sal_row['adv_adj'];
                 <p><strong><?php echo $full_name; ?></strong></p>
                 </div>
                 <div class="col-6 text-end">
-                <img src="./static/GlobalSync.png" width="50%">
+                <img src="./static/logo.png" width="50%">
                 </div>
                 <hr style="margin: 0;">
             </div>

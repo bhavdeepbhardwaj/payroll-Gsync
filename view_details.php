@@ -532,13 +532,15 @@ $sal_mo = date_create($sal_dts['month_yr']);
                         <?php if($sal_dts['inc']) {?>
                           <div class="col-lg-3 p-2">
                               <p class="text-muted mb-1">Incentive</p>
-                              <h3 class="m-0 mb-1"><?php echo "₹ ".inrFormat($sal_dts['inc']); ?></h3>
+                              <!-- <h3 class="m-0 mb-1"><?php echo "₹ ".inrFormat($sal_dts['inc']); ?></h3> -->
+                              <h3 class="m-0 mb-1">₹ 0.00</h3>
                           </div>
                         <?php } ?>
                         <?php if($sal_dts['deductions']) {?>
                           <div class="col-lg-3 p-2">
                               <p class="text-muted mb-1">Deductions</p>
-                              <h3 class="m-0 mb-1"><?php echo "₹ ".inrFormat($sal_dts['deductions']); ?></h3>
+                              <!-- <h3 class="m-0 mb-1"><?php echo "₹ ".inrFormat($sal_dts['deductions']); ?></h3> -->
+                              <h3 class="m-0 mb-1">₹ 0.00</h3>
                           </div>
                         <?php } ?>
                         <?php if($sal_dts['adv_adj']) { ?>

@@ -1,0 +1,12 @@
+.border_right {
+    border-right: 2px solid #eaeaea;
+}
+
+.my-table td {
+    padding: 0.3rem 0.5rem;
+}
+
+.form-help {
+    color: #fff;
+    background: #206bc4;
+}

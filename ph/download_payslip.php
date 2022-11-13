@@ -16,7 +16,7 @@ if($_SESSION["user_type"] == 3 && ($_SESSION["username"] != $empid)){
     $redirectPg = 0;
 }
 
-$sal_sql = "SELECT * FROM gs_emp_salary WHERE sal_id = '".$id."' AND employee_id = '".$empid."'";
+$sal_sql = "SELECT * FROM ph_emp_salary WHERE sal_id = '".$id."' AND employee_id = '".$empid."'";
 
     $sal_res = mysqli_query($link, $sal_sql);
 
@@ -26,7 +26,7 @@ $sal_sql = "SELECT * FROM gs_emp_salary WHERE sal_id = '".$id."' AND employee_id
     // print_r($sal_row);
     // echo "</pre>";
 
-$emp_sql = "SELECT * FROM gs_employees WHERE emp_id = '".$empid."'";
+$emp_sql = "SELECT * FROM ph_employees WHERE emp_id = '".$empid."'";
 
     $emp_res = mysqli_query($link, $emp_sql);
 

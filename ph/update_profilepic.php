@@ -16,7 +16,7 @@ $filetype = array('jpeg','jpg','png','gif','PNG','JPEG','JPG');
         if(in_array(strtolower($file_ext), $filetype))
         {
             move_uploaded_file($key['tmp_name'], $target_file);
-            $sql = "UPDATE gs_employees SET emp_pic = '".$target_file."' WHERE emp_id = '".$id."'";
+            $sql = "UPDATE ph_employees SET emp_pic = '".$target_file."' WHERE emp_id = '".$id."'";
 
             $link -> query($sql);
 

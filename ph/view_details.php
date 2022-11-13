@@ -11,15 +11,22 @@ if(empty($empid)) {
 
 <?php
 
-if($_SESSION["user_type"] == 3 && ($_SESSION["username"] != $empid)){
+// if($_SESSION["user_type"] == 3 && ($_SESSION["username"] != $empid)){
+//   $redirectPg = 1;
+// } else {
+//   $redirectPg = 0;
+// }
+
+if($_SESSION["user_type"] == 3 && ($_SESSION["username"] != $empid) && $_SESSION["country_type"] == 'ph'){
   $redirectPg = 1;
 } else {
   $redirectPg = 0;
 }
 
+
 if(isset($_GET["view"])){
     $id = $_GET["view"];
-    $sql = "SELECT * FROM gs_employees WHERE emp_id = '".$id."'";
+    $sql = "SELECT * FROM ph_employees WHERE emp_id = '".$id."'";
 
     $res = mysqli_query($link, $sql);
 
@@ -27,13 +34,13 @@ if(isset($_GET["view"])){
 
     $empid = $row["emp_id"];
 
-    $sqlid = "SELECT * FROM users WHERE username = '".$id."'";
+    $sqlid = "SELECT * FROM ph_users WHERE username = '".$id."'";
 
     $resid = mysqli_query($link, $sqlid);
 
     $rowid = mysqli_fetch_assoc($resid);
 
-    $sal_details_query = "SELECT * FROM gs_emp_salary WHERE employee_id = '".$id."' ORDER BY month_yr DESC";
+    $sal_details_query = "SELECT * FROM ph_emp_salary WHERE employee_id = '".$id."' ORDER BY month_yr DESC";
 
     $sal_d_run = mysqli_query($link, $sal_details_query);
 

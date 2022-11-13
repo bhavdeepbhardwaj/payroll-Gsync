@@ -4,7 +4,7 @@ require_once "config.php";
 
 $usr = $_POST['uservar'];
 
-$sql = "SELECT * FROM users WHERE username = '".$usr."'";
+$sql = "SELECT * FROM ph_users WHERE username = '".$usr."'";
 
 $result = $link -> query($sql);
 

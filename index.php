@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="page page-center">
     <div class="container-tight py-4">
       <div class="text-center mb-4">
-        <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/GlobalSync.png" height="100" alt=""><span class="text-dark h1 mb-0"></span></a>
+        <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/logo.png" height="100" alt=""><span class="text-dark h1 mb-0"></span></a>
       </div>
 
       <?php
@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="mb-3">
           <div class="row">
             <div class=" col-md-6 col-sm-6 col-lg-6">
-              <a href="index.php" class="btn btn-primary w-100">India</a>
+              <a href="./in/index.php" class="btn btn-primary w-100">India</a>
             </div>
             <div class=" col-md-6 col-sm-6 col-lg-6">
               <a href="./ph/index.php" class="btn btn-primary w-100">Philippines</a>
@@ -184,6 +184,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Tabler Core -->
   <script src="./dist/js/tabler.min.js" defer></script>
   <script src="./dist/js/demo.min.js" defer></script>
+  <script>
+  var redir = '<?php echo $redirectPg ?>';
+  if(redir == 1) {
+    window.location.replace("error-404.php");
+  }
+</script>
 </body>
 
 </html>

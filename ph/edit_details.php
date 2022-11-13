@@ -16,7 +16,7 @@ if($_SESSION["user_type"] == 3){
 <?php
     $id = $_GET["edit"];
     $row = array();
-    $sql = "SELECT * FROM gs_employees WHERE emp_id = '".$id."'";
+    $sql = "SELECT * FROM ph_employees WHERE emp_id = '".$id."'";
 
     $res = mysqli_query($link, $sql);
 
@@ -24,7 +24,7 @@ if($_SESSION["user_type"] == 3){
 
     $empid = $row["emp_id"];
 
-    $sqlid = "SELECT * FROM users WHERE username = '".$empid."'";
+    $sqlid = "SELECT * FROM ph_users WHERE username = '".$empid."'";
 
     $resid = mysqli_query($link, $sqlid);
 

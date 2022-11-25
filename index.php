@@ -3,10 +3,14 @@
 session_start();
 
 // Check if the user is already logged in, if yes then redirect him to welcome page
-if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["user_type"] == 3) {
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["user_type"] == 3 && $_SESSION["country_type"] == 'In') {
   header("location: view_details.php?view=" . $_SESSION['username'] . "");
-} else if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["user_type"] != 3) {
+} else if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["user_type"] == 3 && $_SESSION["country_type"] == 'Ph') {
+  header("location: phview_details.php?view=" . $_SESSION['username'] . "");
+} else if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["user_type"] != 3 & $_SESSION["country_type"] == 'In') {
   header("location: sal_struc.php");
+} else if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true && $_SESSION["user_type"] != 3 && $_SESSION["country_type"] == 'Ph') {
+  header("location: phsal_struc.php");
 }
 
 // Include config file
@@ -36,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Validate credentials
   if (empty($username_err) && empty($password_err)) {
     // Prepare a select statement
-    $sql = "SELECT id, username, password, user_type, user_status FROM users WHERE username = ?";
+    $sql = "SELECT id, username, password, user_type, user_status, country_type FROM users WHERE username = ?";
 
     if ($stmt = mysqli_prepare($link, $sql)) {
       // Bind variables to the prepared statement as parameters
@@ -53,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check if username exists, if yes then verify password
         if (mysqli_stmt_num_rows($stmt) == 1) {
           // Bind result variables
-          mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $user_type, $user_status);
+          mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $user_type, $user_status, $country_type);
           if (mysqli_stmt_fetch($stmt)) {
             if (password_verify($password, $hashed_password) && $user_status == 1) {
 
@@ -73,11 +77,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               $_SESSION["dataUpdate"] = "0";
               $_SESSION["dataIns"] = "0";
               $_SESSION["message"] = "0";
+              $_SESSION["country_type"] = $country_type;
               // Redirect user to welcome page
 
-              if ($user_type == 3) {
+              if ($user_type == 3 && $_SESSION["country_type"] == 'In') {
                 header("location: view_details.php?view=" . $username . "");
-              } else {
+              } else if ($user_type == 3 && $_SESSION["country_type"] == 'Ph') {
+                header("location: phview_details.php?view=" . $username . "");
+              } else if ($_SESSION["country_type"] == 'Ph') {
+                header("location: phsal_struc.php");
+              } else if ($_SESSION["country_type"] == 'In') {
                 header("location: sal_struc.php");
               }
               $resultpp->free_result();
@@ -132,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="page page-center">
     <div class="container-tight py-4">
       <div class="text-center mb-4">
-        <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/logo.png" height="100" alt=""><span class="text-dark h1 mb-0"></span></a>
+        <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/GlobalSync.png" height="100" alt=""><span class="text-dark h1 mb-0"></span></a>
       </div>
 
       <?php
@@ -143,12 +152,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-      <div class="card-body">
+      <!-- <div class="card-body">
         <h1 class="card-title text-center mb-4"><span class="text-dark h1 mb-0"> Payroll System</span></h1>
         <div class="mb-3">
           <div class="row">
             <div class=" col-md-6 col-sm-6 col-lg-6">
-              <a href="./in/index.php" class="btn btn-primary w-100">India</a>
+              <a href="index.php" class="btn btn-primary w-100">India</a>
             </div>
             <div class=" col-md-6 col-sm-6 col-lg-6">
               <a href="./ph/index.php" class="btn btn-primary w-100">Philippines</a>
@@ -156,9 +165,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <!-- <form class="card card-md" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" autocomplete="off">
+      <form class="card card-md" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" autocomplete="off">
         <div class="card-body">
           <h2 class="card-title text-center mb-4">Login to your account</h2>
           <div class="mb-3">
@@ -177,19 +186,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="submit" class="btn btn-primary w-100">Sign in</button>
           </div>
         </div>
-      </form> -->
+      </form>
     </div>
   </div>
   <!-- Libs JS -->
   <!-- Tabler Core -->
   <script src="./dist/js/tabler.min.js" defer></script>
   <script src="./dist/js/demo.min.js" defer></script>
-  <script>
-  var redir = '<?php echo $redirectPg ?>';
-  if(redir == 1) {
-    window.location.replace("error-404.php");
-  }
-</script>
 </body>
 
 </html>

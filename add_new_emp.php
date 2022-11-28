@@ -331,8 +331,8 @@ if ($_SESSION["user_type"] == 3) {
                                             <div class="col-md-6" id="emppp_appraisal_letter">
                                                 <label class="form-label">Appraisal Letter</label>
                                                 <input type="file" class="form-control" name="appraisal_letter" id="emppp" />
-                                                <?php if (isset($file_error_msg)) {
-                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                                <?php if (isset($file_error_msgapp)) {
+                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgapp</div>";
                                                 } ?>
                                             </div>
                                             <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter">
@@ -345,8 +345,8 @@ if ($_SESSION["user_type"] == 3) {
                                             <div class="col-md-6" id="emppp_appraisal_letter1">
                                                 <label class="form-label">Appraisal 1</label>
                                                 <input type="file" class="form-control" name="appraisal_1" id="emppp" />
-                                                <?php if (isset($file_error_msg)) {
-                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                                <?php if (isset($file_error_msgaap1)) {
+                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap1</div>";
                                                 } ?>
                                             </div>
                                             <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter1">
@@ -359,8 +359,8 @@ if ($_SESSION["user_type"] == 3) {
                                             <div class="col-md-6" id="emppp_appraisal_letter2">
                                                 <label class="form-label">Appraisal 2</label>
                                                 <input type="file" class="form-control" name="appraisal_2" id="emppp" />
-                                                <?php if (isset($file_error_msg)) {
-                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                                <?php if (isset($file_error_msgaap2)) {
+                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap2</div>";
                                                 } ?>
                                             </div>
                                             <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter2">
@@ -373,8 +373,8 @@ if ($_SESSION["user_type"] == 3) {
                                             <div class="col-md-6" id="emppp_appraisal_letter3">
                                                 <label class="form-label">Appraisal 3</label>
                                                 <input type="file" class="form-control" name="appraisal_3" id="emppp" />
-                                                <?php if (isset($file_error_msg)) {
-                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                                <?php if (isset($file_error_msgaap3)) {
+                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap3</div>";
                                                 } ?>
                                             </div>
                                             <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter3">
@@ -387,8 +387,8 @@ if ($_SESSION["user_type"] == 3) {
                                             <div class="col-md-6" id="emppp_appraisal_letter4">
                                                 <label class="form-label">Appraisal 4</label>
                                                 <input type="file" class="form-control" name="appraisal_4" id="emppp" />
-                                                <?php if (isset($file_error_msg)) {
-                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                                <?php if (isset($file_error_msgaap4)) {
+                                                    echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap4</div>";
                                                 } ?>
                                             </div>
                                             <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter4">
@@ -405,8 +405,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_ssc">
                                             <label class="form-label">Secondary School Certificate</label>
                                             <input type="file" class="form-control" name="ssc" id="emppp" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msgssc)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgssc</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_ssc">
@@ -419,8 +419,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_hsc">
                                             <label class="form-label">Higher Secondary School Certificate</label>
                                             <input type="file" class="form-control" name="hsc" id="emppp" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msghssc)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msghssc</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_hsc">
@@ -433,8 +433,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_graduation">
                                             <label class="form-label">Graduation</label>
                                             <input type="file" class="form-control" name="graduation" id="emppp" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msgg)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgg</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_graduation">
@@ -447,8 +447,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_experience_relieving">
                                             <label class="form-label">Experience Relieving</label>
                                             <input type="file" class="form-control" name="experience_relieving" id="emppp" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msger)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msger</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
@@ -630,8 +630,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_salary_slip">
                                             <label class="form-label">Salary Ship</label>
                                             <input type="file" class="form-control" name="salary_slip" id="emp_salary_slip" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msgss)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgss</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
@@ -644,8 +644,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_bank_statement">
                                             <label class="form-label">Bank Statement</label>
                                             <input type="file" class="form-control" name="bank_statement" id="emp_bank_statement" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msgbs)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgbs</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
@@ -658,8 +658,8 @@ if ($_SESSION["user_type"] == 3) {
                                         <div class="col-md-6" id="emppp_cancel_cheque">
                                             <label class="form-label">Cancel Cheque</label>
                                             <input type="file" class="form-control" name="cancel_cheque" id="emp_cancel_cheque" />
-                                            <?php if (isset($file_error_msg)) {
-                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msg</div>";
+                                            <?php if (isset($file_error_msgcc)) {
+                                                echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgcc</div>";
                                             } ?>
                                         </div>
                                         <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">

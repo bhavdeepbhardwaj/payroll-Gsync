@@ -831,7 +831,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Appraisal Letter</p>
                         <?php if ($row['appraisal_letter'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_letter'];  ?>" class="btn" target='_blank' download="<?php echo $row['appraisal_letter'];  ?>">
+                            <a href="<?php echo $row['appraisal_letter'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -853,7 +853,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Appraisal 1</p>
                         <?php if ($row['appraisal_1'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_1'];  ?>" class="btn" target='_blank' download="<?php echo $row['appraisal_1'];  ?>">
+                            <a href="<?php echo $row['appraisal_1'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -875,7 +875,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Appraisal 2</p>
                         <?php if ($row['appraisal_2'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_2'];  ?>" class="btn" target='_blank' download="<?php echo $row['appraisal_2'];  ?>">
+                            <a href="<?php echo $row['appraisal_2'];  ?>" class="btn" target='_blank' download>
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -897,7 +897,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Appraisal 3</p>
                         <?php if ($row['appraisal_3'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_3'];  ?>" class="btn" target='_blank' download="<?php echo $row['appraisal_3'];  ?>">
+                            <a href="<?php echo $row['appraisal_3'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -919,7 +919,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Appraisal 4</p>
                         <?php if ($row['appraisal_4'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_4'];  ?>" class="btn" target='_blank' download="<?php echo $row['appraisal_4'];  ?>">
+                            <a href="<?php echo $row['appraisal_4'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -941,7 +941,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Secondary School Certificate</p>
                         <?php if ($row['ssc'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['ssc'];  ?>" class="btn" target='_blank' download="<?php echo $row['ssc'];  ?>">
+                            <a href="<?php echo $row['ssc'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -963,7 +963,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Higher Secondary Certificate</p>
                         <?php if ($row['hsc'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['hsc'];  ?>" class="btn" target='_blank' download="<?php echo $row['hsc'];  ?>">
+                            <a href="<?php echo $row['hsc'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -985,7 +985,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Graduation</p>
                         <?php if ($row['graduation'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['graduation'];  ?>" class="btn" target='_blank' download="<?php echo $row['graduation'];  ?>">
+                            <a href="<?php echo $row['graduation'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -1007,7 +1007,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Experience Relieving</p>
                         <?php if ($row['experience_relieving'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['experience_relieving'];  ?>" class="btn" target='_blank' download="<?php echo $row['experience_relieving'];  ?>">
+                            <a href="<?php echo $row['experience_relieving'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -1029,7 +1029,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Salary Slip</p>
                         <?php if ($row['salary_slip'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['salary_slip'];  ?>" class="btn" target='_blank' download="<?php echo $row['salary_slip'];  ?>">
+                            <a href="<?php echo $row['salary_slip'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -1051,7 +1051,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Bank Statement</p>
                         <?php if ($row['bank_statement'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['bank_statement'];  ?>" class="btn" target='_blank' download="<?php echo $row['bank_statement'];  ?>">
+                            <a href="<?php echo $row['bank_statement'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -1073,7 +1073,7 @@ if (isset($_GET["view"])) {
                         <p class="text-muted mb-0">Cancel Cheque</p>
                         <?php if ($row['cancel_cheque'] != Null) { ?>
                           <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['cancel_cheque'];  ?>" class="btn" target='_blank' download="<?php echo $row['cancel_cheque'];  ?>">
+                            <a href="<?php echo $row['cancel_cheque'];  ?>" class="btn" target='_blank' download >
                               <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
                               <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>

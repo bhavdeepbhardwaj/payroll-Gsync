@@ -714,6 +714,7 @@ if ($_SESSION["user_type"] == 3) {
                                         </div>
                                     </div>
                                 </fieldset>
+
                                 <fieldset class="form-fieldset">
                                     <legend>Incentives & Deductions</legend>
                                     <div class="row g-2 align-items-center mt-3">
@@ -743,6 +744,7 @@ if ($_SESSION["user_type"] == 3) {
                                         </div>
                                     </div>
                                 </fieldset>
+
                                 <fieldset class="form-fieldset">
                                     <legend>Employee Credentials</legend>
                                     <div class="row g-2 align-items-center">
@@ -758,6 +760,7 @@ if ($_SESSION["user_type"] == 3) {
                                         </div>
                                     </div>
                                 </fieldset>
+                                
                                 <fieldset class="form-fieldset">
                                     <legend>Employee Exit & Description</legend>
                                     <div class="row g-2 align-items-center">
@@ -785,6 +788,7 @@ if ($_SESSION["user_type"] == 3) {
                                         </div>
                                     </div>
                                 </fieldset>
+                                
                                 <fieldset class="form-fieldset">
                                     <legend class="">Employee Status</legend>
                                     <div class="row g-2 align-items-center">

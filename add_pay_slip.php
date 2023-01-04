@@ -77,14 +77,29 @@ if($_SESSION["user_type"] == 3){
                             <label class="form-label">Account No.</label>
                             <input type="text" class="form-control" name="ac_no" autocomplete="off"/>
                         </div>
+                        <?php if($_SESSION["user_type"] == 2 && $_SESSION["country_type"] == 'In') { ?>
                         <div class="col-md-2">
                             <label class="form-label">PAN No.</label>
                             <input type="text" class="form-control" name="pan" autocomplete="off"/>
                         </div>
-                        <div class="col-md-2">
+                        <?php } else { ?>
+                            <div class="col-md-2">
+                            <label class="form-label">SSS No.</label>
+                            <input type="text" class="form-control" name="pan" autocomplete="off"/>
+                        </div>
+                        <?php } ?>
+                        <?php if($_SESSION["user_type"] == 2 && $_SESSION["country_type"] == 'In') { ?>
+                            <div class="col-md-2">
                             <label class="form-label">UAN NO.</label>
                             <input type="text" class="form-control" name="uan" autocomplete="off"/>
                         </div>
+                        <?php } else { ?>
+                            <div class="col-md-2">
+                            <label class="form-label">PHIC No.</label>
+                            <input type="text" class="form-control" name="uan" autocomplete="off"/>
+                        </div>
+                        <?php } ?>
+                        
                         <div class="col-md-2">
                             <label class="form-label required">Gross Salary</label>
                             <input type="text" class="form-control" name="gross" autocomplete="off" required/>

@@ -589,70 +589,70 @@ if (isset($_GET["view"])) {
 
                       <?php if ($sal_dts['ph_gross_salary']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph Gross Salary</p>
+                          <p class="text-muted mb-1">Gross Salary</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_gross_salary']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_thirteent_month_pay']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph 13th Month Pay</p>
+                          <p class="text-muted mb-1">13th Month Pay</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_thirteent_month_pay']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_tax']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph Tax</p>
+                          <p class="text-muted mb-1">Tax</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_tax']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_sss_emp']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph SSS EMP</p>
+                          <p class="text-muted mb-1">SSS EMP</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_sss_emp']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_sss_emy']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph SSS EMY</p>
+                          <p class="text-muted mb-1">SSS EMY</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_sss_emy']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_phic_emp']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph PHIC EMP</p>
+                          <p class="text-muted mb-1">PHIC EMP</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_phic_emp']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_phic_emy']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph PHIC EMY</p>
+                          <p class="text-muted mb-1">PHIC EMY</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_phic_emy']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_hdmf_emp']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph HDMF EMP</p>
+                          <p class="text-muted mb-1">HDMF EMP</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_hdmf_emp']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_hdmf_emy']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph HDMF EMY</p>
+                          <p class="text-muted mb-1">HDMF EMY</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_hdmf_emy']); ?></h3>
                         </div>
                       <?php } ?>
 
                       <?php if ($sal_dts['ph_hmo_emp']) { ?>
                         <div class="col-lg-3 p-2">
-                          <p class="text-muted mb-1">Ph HMO EMP</p>
+                          <p class="text-muted mb-1">HMO EMP</p>
                           <h3 class="m-0 mb-1"><?php echo "₱ " . inrFormat($sal_dts['ph_hmo_emp']); ?></h3>
                         </div>
                       <?php } ?>

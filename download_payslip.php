@@ -592,10 +592,17 @@ $emp_esi = $emp_row['emp_uan'];
                                     <div class="text-muted">Department</div>
                                     <p class="strong mb-1"><?php echo $department; ?></p>
                                 </td>
-                                <td>
-                                    <div class="text-muted">PAN</div>
-                                    <p class="strong mb-1"><?php echo $pan; ?></p>
-                                </td>
+                                <?php if ($_SESSION["user_type"] == 2 && $_SESSION["country_type"] == 'Ph') { ?>
+                                    <td>
+                                        <div class="text-muted">SSS No.</div>
+                                        <p class="strong mb-1"><?php echo $uan; ?></p>
+                                    </td>
+                                <?php } else { ?>
+                                    <td>
+                                        <div class="text-muted">PAN</div>
+                                        <p class="strong mb-1"><?php echo $pan; ?></p>
+                                    </td>
+                                <?php } ?>
                             </tr>
                             <tr>
                                 <td>
@@ -616,10 +623,7 @@ $emp_esi = $emp_row['emp_uan'];
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="text-muted">SSS No.</div>
-                                    <p class="strong mb-1"><?php echo $uan; ?></p>
-                                </td>
+
                                 <td>
                                     <div class="text-muted">PHIC No.</div>
                                     <p class="strong mb-1"><?php echo $emp_esi; ?></p>
@@ -647,7 +651,7 @@ $emp_esi = $emp_row['emp_uan'];
                                             <p class="mb-0">Employer SSS Contribution</p>
                                         </td>
                                         <td class="border_right">
-                                            <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_sss_emy']); ?></p>
+                                            <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_sss_emy']); ?></p>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -657,7 +661,7 @@ $emp_esi = $emp_row['emp_uan'];
                                             <p class="mb-0">Employer PHIC Contribution</p>
                                         </td>
                                         <td class="border_right">
-                                            <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_phic_emy']); ?></p>
+                                            <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_phic_emy']); ?></p>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -667,7 +671,7 @@ $emp_esi = $emp_row['emp_uan'];
                                             <p class="mb-0">Employer HDMF Contribution</p>
                                         </td>
                                         <td class="border_right">
-                                            <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_hdmf_emy']); ?></p>
+                                            <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_hdmf_emy']); ?></p>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -677,7 +681,7 @@ $emp_esi = $emp_row['emp_uan'];
                                             <p class="mb-0">Employer HMO Contribution</p>
                                         </td>
                                         <td class="border_right">
-                                            <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_hmo_emp']); ?></p>
+                                            <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_hmo_emp']); ?></p>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -686,7 +690,7 @@ $emp_esi = $emp_row['emp_uan'];
                                         <p class="mb-0 strong">Total Earnings (A)</p>
                                     </td>
                                     <td class="border_right strong">
-                                        <p class="mb-0 text-end tot_earn"><?php echo "₹ " . inrFormat($sal_row['earnings']); ?></p>
+                                        <p class="mb-0 text-end tot_earn"><?php echo "₱ " . inrFormat($sal_row['earnings']); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -694,7 +698,7 @@ $emp_esi = $emp_row['emp_uan'];
                                         <p class="mb-0">Net Salary Payable (A-B)</p>
                                     </td>
                                     <td class="border_right strong">
-                                        <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['net_salary']); ?></p>
+                                        <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['net_salary']); ?></p>
                                     </td>
                                 </tr>
                                 <tr>
@@ -720,7 +724,7 @@ $emp_esi = $emp_row['emp_uan'];
                                                 <p class="mb-0">Employee SSS Contribution</p>
                                             </td>
                                             <td class="border_right">
-                                                <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_sss_emp']); ?></p>
+                                                <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_sss_emp']); ?></p>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -730,7 +734,7 @@ $emp_esi = $emp_row['emp_uan'];
                                                 <p class="mb-0">Employee PHIC Contribution</p>
                                             </td>
                                             <td class="border_right">
-                                                <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_phic_emp']); ?></p>
+                                                <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_phic_emp']); ?></p>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -740,7 +744,7 @@ $emp_esi = $emp_row['emp_uan'];
                                                 <p class="mb-0">Employee HDMF Contribution</p>
                                             </td>
                                             <td class="border_right">
-                                                <p class="mb-0 text-end"><?php echo "₹ " . inrFormat($sal_row['ph_hdmf_emp']); ?></p>
+                                                <p class="mb-0 text-end"><?php echo "₱ " . inrFormat($sal_row['ph_hdmf_emp']); ?></p>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -750,7 +754,7 @@ $emp_esi = $emp_row['emp_uan'];
                                                 <p class="mb-0">TDS (Tax)</p>
                                             </td>
                                             <td>
-                                                <p class="mb-0 text-end tds"><?php echo "₹ " . inrFormat($sal_row['ph_tax']); ?></p>
+                                                <p class="mb-0 text-end tds"><?php echo "₱ " . inrFormat($sal_row['ph_tax']); ?></p>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -759,7 +763,7 @@ $emp_esi = $emp_row['emp_uan'];
                                             <p class="mb-0 strong">Total Deductions (B)</p>
                                         </td>
                                         <td>
-                                            <p class="mb-0 text-end tolduc strong"><?php echo "₹ " . inrFormat($sal_row['deductions']); ?></p>
+                                            <p class="mb-0 text-end tolduc strong"><?php echo "₱ " . inrFormat($sal_row['deductions']); ?></p>
                                         </td>
                                     </tr>
                                 </table>

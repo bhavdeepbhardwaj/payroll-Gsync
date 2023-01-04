@@ -42,7 +42,7 @@ if($_SESSION["user_type"] == 3){
                     <label class="form-label required">Gross Salary</label>
                     <input type="text" class="form-control" name="gross_sal" id="gross_salary" autocomplete="off" required/>
                   </div>
-                  <div class="col-md-2">
+                  <!-- <div class="col-md-2">
                     <label class="form-label required">Food Allowance</label>
                     <input type="text" class="form-control" id="food_allowance" value="2200" autocomplete="off" required/>
                   </div>
@@ -53,6 +53,42 @@ if($_SESSION["user_type"] == 3){
                   <div class="col-md-2">
                     <label class="form-label required">Stack Incentives</label>
                     <input type="text" class="form-control" id="stack_incentives" autocomplete="off" required/>
+                  </div> -->
+                  <div class="col-md-2">
+                    <label class="form-label required">13th Month Pay</label>
+                    <input type="text" class="form-control" name="th_month_pay" id="th_month_pay" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">Tax</label>
+                    <input type="text" class="form-control" name="tax" id="tax" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">SSS (Employee)</label>
+                    <input type="text" class="form-control" name="sss_employee" id="sss_employee" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">SSS (Employer)</label>
+                    <input type="text" class="form-control" name="sss_employer" id="sss_employer" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">PHIC (Employee)</label>
+                    <input type="text" class="form-control" name="phic_employee" id="phic_employee" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">PHIC (Employer)</label>
+                    <input type="text" class="form-control" name="phic_employer" id="phic_employer" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">HDMF (Employee)</label>
+                    <input type="text" class="form-control" name="hdmf_employee" id="hdmf_employee" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">HDMF (Employer)</label>
+                    <input type="text" class="form-control" name="hdmf_employer" id="hdmf_employer" autocomplete="off" required/>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">HMO PhilCare (Employee)</label>
+                    <input type="text" class="form-control" name="hmo" id="hmo" autocomplete="off" required/>
                   </div>
                 </div>
                 <div class="row g-2">
@@ -100,7 +136,7 @@ if($_SESSION["user_type"] == 3){
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <!-- <tr>
                         <td >Basic</td>
                         <td class="text-muted basic" style="text-align:right;"></td>
                         <td class="text-muted annual_basic" style="text-align:right;"></td>
@@ -119,19 +155,20 @@ if($_SESSION["user_type"] == 3){
                         <td >Other Allowance</td>
                         <td class="text-muted oa" style="text-align:right;"></td>
                         <td class="text-muted annual_oa" style="text-align:right;"></td>
-                      </tr>
-                      <tr>
-                        <td >Gross Salary</td>
-                        <td class="text-muted gs" style="text-align:right;"></td>
-                        <td class="text-muted annual_gs" style="text-align:right;"></td>
-                      </tr>
+                      </tr> -->
                       <tr>
                         <td >13th Month Pay</td>
-                        <td class="text-muted gs" style="text-align:right;"></td>
-                        <td class="text-muted annual_gs" style="text-align:right;"></td>
+                        <!-- <td class="text-muted gs" style="text-align:right;"></td> -->
+                        <td class="text-muted thmonthpay" style="text-align:right;"></td>
+                        <td class="text-muted annual_thmonthpay" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >HMO PhilCare - Employee</td>
+                        <td class="text-muted hmo" style="text-align:right;"></td>
+                        <td class="text-muted annual_hmo" style="text-align:right;"></td>
+                      </tr>
+                      <tr>
+                        <td >Gross Salary</td>
                         <td class="text-muted gs" style="text-align:right;"></td>
                         <td class="text-muted annual_gs" style="text-align:right;"></td>
                       </tr>
@@ -153,38 +190,43 @@ if($_SESSION["user_type"] == 3){
                     <tbody>
                       <tr>
                         <td >SSS - Employer</td>
-                        <td class="text-muted pfempr" style="text-align:right;"></td>
-                        <td class="text-muted annual_pfempr" style="text-align:right;"></td>
+                        <td class="text-muted sss_employer" style="text-align:right;"></td>
+                        <td class="text-muted annual_sssemployer" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >SSS - Employee</td>
-                        <td class="text-muted pfemp" style="text-align:right;"></td>
-                        <td class="text-muted annual_pfemp" style="text-align:right;"></td>
+                        <td class="text-muted sss_employee" style="text-align:right;"></td>
+                        <td class="text-muted annual_sssemployee" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >PHIC - Employer</td>
-                        <td class="text-muted esiempr" style="text-align:right;"></td>
-                        <td class="text-muted annual_esiempr" style="text-align:right;"></td>
+                        <td class="text-muted phic_employer" style="text-align:right;"></td>
+                        <td class="text-muted annual_phic_employer" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >PHIC - Employee</td>
-                        <td class="text-muted esiemp" style="text-align:right;"></td>
-                        <td class="text-muted annual_esiemp" style="text-align:right;"></td>
+                        <td class="text-muted phic_employee" style="text-align:right;"></td>
+                        <td class="text-muted annual_phic_employee" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >HDMF - Employer</td>
-                        <td class="text-muted esiempr" style="text-align:right;"></td>
-                        <td class="text-muted annual_esiempr" style="text-align:right;"></td>
+                        <td class="text-muted hdmf_employer" style="text-align:right;"></td>
+                        <td class="text-muted annual_hdmf_employer" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >HDMF - Employee</td>
-                        <td class="text-muted esiemp" style="text-align:right;"></td>
-                        <td class="text-muted annual_esiemp" style="text-align:right;"></td>
+                        <td class="text-muted hdmf_employee" style="text-align:right;"></td>
+                        <td class="text-muted annual_hdmf_employee" style="text-align:right;"></td>
+                      </tr>
+                      <tr>
+                        <td >Tax</td>
+                        <td class="text-muted tax" style="text-align:right;"></td>
+                        <td class="text-muted annual_tax" style="text-align:right;"></td>
                       </tr>
                       <tr>
                         <td >Total Contributions</td>
-                        <td class="text-muted tolduc" style="text-align:right;"></td>
-                        <td class="text-muted annual_tolduc" style="text-align:right;"></td>
+                        <td class="text-muted total_contr" style="text-align:right;"></td>
+                        <td class="text-muted annual_total_contr" style="text-align:right;"></td>
                       </tr>
                     </tbody>
                   </table>
@@ -199,7 +241,7 @@ if($_SESSION["user_type"] == 3){
                         <th colspan="3" class="text-center" style="font-size: .775rem;">Others</th>
                       </tr>
                       </thead>
-                      <tr class="food_allow">
+                      <!-- <tr class="food_allow">
                         <td >Food Allowance*</td>
                         <td class="text-muted fa" style="text-align:right;"></td>
                         <td class="text-muted annual_fa" style="text-align:right;"></td>
@@ -213,7 +255,7 @@ if($_SESSION["user_type"] == 3){
                         <td >Stack Incentives**</td>
                         <td class="text-muted si" style="text-align:right;"></td>
                         <td class="text-muted annual_si" style="text-align:right;"></td>
-                      </tr>
+                      </tr> -->
                       <!-- <tr>
                         <td >Earnings</td>
                         <td class="text-muted earn" style="text-align:right;"></td>
@@ -221,13 +263,13 @@ if($_SESSION["user_type"] == 3){
                       </tr> -->
                       <tr>
                         <td><strong class="in-hand">In Hand</strong></td>
-                        <td class="text-muted inhand" style="text-align:right; font-weight: 600;"></td>
-                        <td class="text-muted annual_inhand" style="text-align:right; font-weight: 600;"></td>
+                        <td class="text-muted in_hand_fn" style="text-align:right; font-weight: 600;"></td>
+                        <td class="text-muted annual_in_hand_fn" style="text-align:right; font-weight: 600;"></td>
                       </tr>
                       <tr>
                         <td ><strong>CTC</strong></td>
-                        <td class="text-muted ctc" style="text-align:right; font-weight: 600;"></td>
-                        <td class="text-muted annual_ctc" style="text-align:right; font-weight: 600;"></td>
+                        <td class="text-muted ctc_fn" style="text-align:right; font-weight: 600;"></td>
+                        <td class="text-muted annual_ctc_fn" style="text-align:right; font-weight: 600;"></td>
                       </tr>
                       <tr>
                         <td colspan="3"><em>*No Cash Reimbursement (Availed as Service)</em></td>
@@ -250,7 +292,7 @@ if($_SESSION["user_type"] == 3){
     <div class="container-xl mt-3">
       <div class="row g-2 align-items-center d-print-none">
       <div class="col-md-12 text-center">
-          <button type="button" class="btn btn-outline-primary" onclick="javascript:window.print();">
+          <button type="button" class="btn btn-outline-primary" onclick="javascript:window.print();" hidden>
                 <!-- Download SVG icon from http://tabler-icons.io/i/printer -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2"></path><path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4"></path><rect x="7" y="13" width="10" height="8" rx="2"></rect></svg>
                 Print Salary Slip

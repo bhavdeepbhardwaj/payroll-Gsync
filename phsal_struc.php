@@ -188,37 +188,37 @@ if($_SESSION["user_type"] == 3){
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+                      <tr class="sss_er">
                         <td >SSS - Employer</td>
                         <td class="text-muted sss_employer" style="text-align:right;"></td>
                         <td class="text-muted annual_sssemployer" style="text-align:right;"></td>
                       </tr>
-                      <tr>
+                      <tr class="sss_em">
                         <td >SSS - Employee</td>
                         <td class="text-muted sss_employee" style="text-align:right;"></td>
                         <td class="text-muted annual_sssemployee" style="text-align:right;"></td>
                       </tr>
-                      <tr>
+                      <tr class="phic_emr">
                         <td >PHIC - Employer</td>
                         <td class="text-muted phic_employer" style="text-align:right;"></td>
                         <td class="text-muted annual_phic_employer" style="text-align:right;"></td>
                       </tr>
-                      <tr>
+                      <tr class="phic_emp">
                         <td >PHIC - Employee</td>
                         <td class="text-muted phic_employee" style="text-align:right;"></td>
                         <td class="text-muted annual_phic_employee" style="text-align:right;"></td>
                       </tr>
-                      <tr>
+                      <tr class="hdmf_emr">
                         <td >HDMF - Employer</td>
                         <td class="text-muted hdmf_employer" style="text-align:right;"></td>
                         <td class="text-muted annual_hdmf_employer" style="text-align:right;"></td>
                       </tr>
-                      <tr>
+                      <tr class="hdmf_emp">
                         <td >HDMF - Employee</td>
                         <td class="text-muted hdmf_employee" style="text-align:right;"></td>
                         <td class="text-muted annual_hdmf_employee" style="text-align:right;"></td>
                       </tr>
-                      <tr>
+                      <tr class="taxp">
                         <td >Tax</td>
                         <td class="text-muted tax" style="text-align:right;"></td>
                         <td class="text-muted annual_tax" style="text-align:right;"></td>

@@ -1,5 +1,5 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -30,8 +30,8 @@ $("#gen_sal").click(function() {
     var stack_inc = $("#stack_incentives").val();
     var food_allw = $("#food_allowance").val();
     var travel_allw = $("#travel_allowance").val();
-    
-    if(gross_sal == 0 || gross_sal == null) {
+
+    if (gross_sal == 0 || gross_sal == null) {
         final_basic = 0;
         $(".basic").text(addCommas(final_basic));
     } else {
@@ -47,7 +47,7 @@ $("#gen_sal").click(function() {
     $(".annual_basic").text(addCommas(parseFloat(annual_final_basic)));
 
     hra_calc = final_basic * 1.5;
-    if(hra_calc < gross_sal){
+    if (hra_calc < gross_sal) {
         final_hra = final_basic * 0.5;
         final_hra = parseFloat(final_hra);
         $(".hra").text(addCommas(parseFloat(final_hra)));
@@ -61,7 +61,7 @@ $("#gen_sal").click(function() {
     $(".annual_hra").text(addCommas(parseFloat(annual_hra_calc)));
 
     var sa_calculation = gross_sal - final_basic - final_hra;
-    if(sa_calculation > final_hra) {
+    if (sa_calculation > final_hra) {
         var sa_calc = final_basic * 0.5;
         sa_calc = parseFloat(sa_calc);
         $(".sa").text(addCommas(parseFloat(sa_calc)));
@@ -89,7 +89,7 @@ $("#gen_sal").click(function() {
     var annual_final_gross = final_gross * 12;
     $(".annual_gs").text(addCommas(parseFloat(annual_final_gross)));
 
-    if(food_allw == null || food_allw == "" || food_allw == 0) {
+    if (food_allw == null || food_allw == "" || food_allw == 0) {
         $(".food_allow").hide();
     } else {
         $(".food_allow").show();
@@ -100,7 +100,7 @@ $("#gen_sal").click(function() {
         $(".annual_fa").text(addCommas(parseFloat(annual_food_allw)));
     }
 
-    if(travel_allw == null || travel_allw == "" || travel_allw == 0) {
+    if (travel_allw == null || travel_allw == "" || travel_allw == 0) {
         $(".travel_allow").hide();
     } else {
         $(".travel_allow").show();
@@ -111,7 +111,7 @@ $("#gen_sal").click(function() {
         $(".annual_ta").text(addCommas(parseFloat(annual_travel_allw)));
     }
 
-    if(stack_inc == null || stack_inc == "" || stack_inc == 0) {
+    if (stack_inc == null || stack_inc == "" || stack_inc == 0) {
         $(".stack_in").hide();
         $(".stack_info").hide();
         $(".in-hand").text("In Hand");
@@ -133,7 +133,7 @@ $("#gen_sal").click(function() {
     // $(".annual_earn").text(addCommas(annual_total_earnings));
 
     var pf_calc = gross_sal - final_hra;
-    if(pf_calc >= 15000) {
+    if (pf_calc >= 15000) {
         var final_pf_employer = 15000 * 0.13;
         final_pf_employer = parseFloat(final_pf_employer);
 
@@ -156,7 +156,7 @@ $("#gen_sal").click(function() {
     var annual_final_pf_employee = final_pf_employee * 12;
     $(".annual_pfemp").text(addCommas(annual_final_pf_employee));
 
-    if(final_gross >= 21001) {
+    if (final_gross >= 21001) {
         var final_esi_employer = 0;
         var final_esi_employee = 0;
     } else {
@@ -164,7 +164,7 @@ $("#gen_sal").click(function() {
         final_esi_employer = Math.round(final_esi_employer);
 
         var final_esi_employee = final_gross * 0.0075;
-        final_esi_employee =  Math.round(final_esi_employee);
+        final_esi_employee = Math.round(final_esi_employee);
     }
 
     $(".esiempr").text(addCommas(parseFloat(final_esi_employer)));
@@ -208,9 +208,9 @@ function addCommas(nStr) {
     });
     return inr_amt;
 }
-        
-  function generatePDF() {
+
+function generatePDF() {
     var doc_name = $("#full_name").val() + "_Salary_Structure.pdf";
-	var element = document.getElementById('converttoPDF');
-	html2pdf().set({ html2canvas: { scale: 4, scrollY:0 } }).from(element).save(doc_name);
+    var element = document.getElementById('converttoPDF');
+    html2pdf().set({ html2canvas: { scale: 4, scrollY: 0 } }).from(element).save(doc_name);
 }

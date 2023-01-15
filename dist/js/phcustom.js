@@ -11,15 +11,41 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 $("#gen_sal").click(function() {
 
     var sss_emp = $("#sss_employee").val();
+    if (sss_emp == '') {
+        sss_emp = 0;
+    }
     var sss_emr = $("#sss_employer").val();
+    if (sss_emr == '') {
+        sss_emr = 0;
+    }
     var phic_emp = $("#phic_employee").val();
+    if (phic_emp == '') {
+        phic_emp = 0;
+    }
     var phic_emr = $("#phic_employer").val();
+    if (phic_emr == '') {
+        phic_emr = 0;
+    }
     var hdmf_emp = $("#hdmf_employee").val();
+    if (hdmf_emp == '') {
+        hdmf_emp = 0;
+    }
+    // alert(hdmf_emp);
     var hdmf_emr = $("#hdmf_employer").val();
+    if (hdmf_emr == '') {
+        hdmf_emr = 0;
+    }
     var tax = $("#tax").val();
+    if (tax == '') {
+        tax = 0;
+    }
     var gross_salary = $("#gross_salary").val();
     var thmonthpay = $("#th_month_pay").val();
     var hmo = $("#hmo").val();
+    if (hmo == '') {
+        hmo = 0;
+    }
+
 
 
 
@@ -80,6 +106,10 @@ $("#gen_sal").click(function() {
         $(".annual_hmo").text(addCommas(parseFloat(annual_hmo)));
     } else {
         var hmo = $("#hmo").val();
+        var sss_employee = $("#sss_employee").val();
+        if (sss_employee == "") {
+            sss_employee = 0;
+        }
         $(".hmo").text(addCommas(parseFloat(hmo)));
 
         var annual_hmo = hmo * 12;
@@ -92,6 +122,9 @@ $("#gen_sal").click(function() {
     } else {
         $(".sss_em").show();
         var sss_employee = $("#sss_employee").val();
+        if (sss_employee == "") {
+            sss_employee = 0;
+        }
         $(".sss_employee").text(addCommas(parseFloat(sss_employee)));
 
         var annual_sssemployee = sss_employee * 12;
@@ -104,6 +137,9 @@ $("#gen_sal").click(function() {
     } else {
         $(".sss_er").show();
         var sss_employer = $("#sss_employer").val();
+        if (sss_employer == "") {
+            sss_employer = 0;
+        }
         $(".sss_employer").text(addCommas(parseFloat(sss_employer)));
 
         var annual_sssemployer = sss_employer * 12;
@@ -116,6 +152,9 @@ $("#gen_sal").click(function() {
     } else {
         $(".phic_emr").show();
         var phic_employer = $("#phic_employer").val();
+        if (phic_employer == "") {
+            phic_employer = 0;
+        }
         $(".phic_employer").text(addCommas(parseFloat(phic_employer)));
 
         var annual_phic_employer = phic_employer * 12;
@@ -128,6 +167,9 @@ $("#gen_sal").click(function() {
     } else {
         $(".phic_emp").show();
         var phic_employee = $("#phic_employee").val();
+        if (phic_employee == "") {
+            phic_employee = 0;
+        }
         $(".phic_employee").text(addCommas(parseFloat(phic_employee)));
 
         var annual_phic_employee = phic_employee * 12;
@@ -140,6 +182,9 @@ $("#gen_sal").click(function() {
     } else {
         $(".hdmf_emr").show();
         var hdmf_employer = $("#hdmf_employer").val();
+        if (hdmf_employer == "") {
+            hdmf_employer = 0;
+        }
         $(".hdmf_employer").text(addCommas(parseFloat(hdmf_employer)));
 
         var annual_hdmf_employer = hdmf_employer * 12;
@@ -152,6 +197,9 @@ $("#gen_sal").click(function() {
     } else {
         $(".hdmf_emp").show();
         var hdmf_employee = $("#hdmf_employee").val();
+        if (hdmf_employee == "") {
+            hdmf_employee = 0;
+        }
         $(".hdmf_employee").text(addCommas(parseFloat(hdmf_employee)));
 
         var annual_hdmf_employee = hdmf_employee * 12;
@@ -164,6 +212,14 @@ $("#gen_sal").click(function() {
     } else {
         $(".taxp").show();
         var tax = $("#tax").val();
+        // var taxxx = "";
+        // if (annual_gross_salary > 400000) {
+        //     taxxx = (annual_gross_salary - 400000) * 0.25 + 300000;
+        // }
+        if (tax == "") {
+            tax = 0;
+        }
+
         $(".tax").text(addCommas(parseFloat(tax)));
 
         var annual_tax = tax * 12;
@@ -171,6 +227,28 @@ $("#gen_sal").click(function() {
     }
 
     // Total Contributions
+    if (sss_employer == undefined) {
+        sss_employer = 0;
+    }
+    if (phic_employer == undefined) {
+        phic_employer = 0;
+    }
+    if (hdmf_employer == undefined) {
+        hdmf_employer = 0;
+    }
+    if (sss_employee == undefined) {
+        sss_employee = 0;
+    }
+    if (phic_employee == undefined) {
+        phic_employee = 0;
+    }
+    if (hdmf_employee == undefined) {
+        hdmf_employee = 0;
+    }
+    if (tax == undefined) {
+        tax = 0;
+    }
+
 
     var total_contr = parseFloat(hmo) + parseFloat(sss_employee) + parseFloat(sss_employer) + parseFloat(phic_employee) + parseFloat(phic_employer) + parseFloat(hdmf_employee) + parseFloat(hdmf_employer) + parseFloat(tax);
     // console.log(total_contr);
@@ -180,11 +258,28 @@ $("#gen_sal").click(function() {
     // Annual
     var annual_total_contr = total_contr * 12;
     $(".annual_total_contr").text(addCommas(parseFloat(annual_total_contr)));
-
+    // alert(hdmf_employee);
     // In Hand
     // var inHand = parseInt(gross_salary) - parseInt(sss_employee) - parseInt(phic_employee) - parseInt(hdmf_employee) - parseInt(tax);
-    var inHand = gross_salary - (sss_employee - phic_employee - hdmf_employee - tax);
-    // alert(inHand); 
+    if (sss_employee == undefined) {
+        sss_employee = 0;
+    }
+    if (phic_employee == undefined) {
+        phic_employee = 0;
+    }
+    if (hdmf_employee == undefined) {
+        hdmf_employee = 0;
+    }
+    if (tax == undefined) {
+        tax = 0;
+    }
+    // console.log("gs" + gross_salary);
+    // console.log("sss" + sss_employee);
+    // console.log("phic" + phic_employee);
+    // console.log("hdmf" + hdmf_employee);
+    // console.log("tax" + tax);
+    const deductTo = parseInt(sss_employee) + parseInt(phic_employee) + parseInt(hdmf_employee) + parseInt(tax) + parseInt(hmo);
+    var inHand = parseInt(gross_salary) - parseInt(deductTo);
     $(".in_hand_fn").text(addCommas(parseFloat(inHand)));
 
     var annual_inHand = inHand * 12;
@@ -192,16 +287,16 @@ $("#gen_sal").click(function() {
 
     // CTC 
     // var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo);
-    var ctc = gross_salary + sss_employer + phic_employer + hdmf_employer + thmonthpay + hmo;
+    var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo);
     // alert(ctc);
     $(".ctc_fn").text(addCommas(parseInt(ctc)));
 
     var annual_ctc = parseFloat(ctc) * 12;
     $(".annual_ctc_fn").text(addCommas(annual_ctc));
 
-    sss_emp = sss_emr = phic_emp = phic_emr = hdmf_emp = hdmf_emr = gross_salary = thmonthpay = hmo = 0;
+    // sss_emp = sss_emr = phic_emp = phic_emr = hdmf_emp = hdmf_emr = gross_salary = thmonthpay = hmo = 0;
 
-    annual_sssemployee = annual_sssemployer = annual_phic_employer = annual_phic_employee = annual_hdmf_employee = annual_hdmf_employer = annual_gross_salary = annual_thmonthpay = annual_hmo = 0;
+    // annual_sssemployee = annual_sssemployer = annual_phic_employer = annual_phic_employee = annual_hdmf_employee = annual_hdmf_employer = annual_gross_salary = annual_thmonthpay = annual_hmo = 0;
 
 });
 

@@ -1,5 +1,5 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         document.querySelector(this.getAttribute('href')).scrollIntoView({
@@ -8,7 +8,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-$("#gen_sal").click(function() {
+$("#gen_sal").click(function () {
 
     var sss_emp = $("#sss_employee").val();
     if (sss_emp == '') {
@@ -47,8 +47,6 @@ $("#gen_sal").click(function() {
     }
 
 
-
-
     // Candidate Name
     var candidate_name = $("#full_name").val();
     $(".candidate_name").text(candidate_name);
@@ -77,8 +75,11 @@ $("#gen_sal").click(function() {
 
 
     // 13th Month Pay
+    // if (thmonthpay == "") {
+    //     $(".thmopa").hide();
+    // }
     if (thmonthpay == null || thmonthpay == "" || thmonthpay == 0) {
-
+        
         thmonthpay = 0;
         // var thmonthpay = $("#th_month_pay").val();
         // var thmonthpay = gross_salary / 12;
@@ -86,6 +87,9 @@ $("#gen_sal").click(function() {
 
         var annual_thmonthpay = thmonthpay * 12;
         $(".annual_thmonthpay").text(addCommas(parseFloat(annual_thmonthpay)));
+        if (thmonthpay == "") {
+            $(".thmopa").hide();
+        }
     } else {
 
         var thmonthpay = $("#th_month_pay").val();
@@ -96,14 +100,19 @@ $("#gen_sal").click(function() {
     }
 
     // HMO PhilCare - Employee
+    // if (hmo == "") {
+    //     $(".hmophiemp").hide();
+    // }
     if (hmo == null || hmo == "" || hmo == 0) {
-
         hmo = 0;
         //  var hmo = $("#hmo").val();
         $(".hmo").text(addCommas(parseFloat(hmo)));
 
         var annual_hmo = hmo * 12;
         $(".annual_hmo").text(addCommas(parseFloat(annual_hmo)));
+        if (hmo == "") {
+            $(".hmophiemp").hide();
+        }
     } else {
         var hmo = $("#hmo").val();
         var sss_employee = $("#sss_employee").val();
@@ -279,7 +288,7 @@ $("#gen_sal").click(function() {
     // console.log("hdmf" + hdmf_employee);
     // console.log("tax" + tax);
     const deductTo = parseInt(sss_employee) + parseInt(phic_employee) + parseInt(hdmf_employee) + parseInt(tax) + parseInt(hmo);
-    var inHand = parseInt(gross_salary) - parseInt(deductTo);
+    var inHand = parseInt(gross_salary) + parseInt(thmonthpay) - parseInt(deductTo) + parseInt(hmo);
     $(".in_hand_fn").text(addCommas(parseFloat(inHand)));
 
     var annual_inHand = inHand * 12;
@@ -288,6 +297,7 @@ $("#gen_sal").click(function() {
     // CTC 
     // var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo);
     var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo);
+    // var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay);
     // alert(ctc);
     $(".ctc_fn").text(addCommas(parseInt(ctc)));
 

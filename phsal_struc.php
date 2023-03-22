@@ -156,17 +156,13 @@ if($_SESSION["user_type"] == 3){
                         <td class="text-muted oa" style="text-align:right;"></td>
                         <td class="text-muted annual_oa" style="text-align:right;"></td>
                       </tr> -->
-                      <tr>
+                      <tr class="thmopa">
                         <td >13th Month Pay</td>
                         <!-- <td class="text-muted gs" style="text-align:right;"></td> -->
                         <td class="text-muted thmonthpay" style="text-align:right;"></td>
                         <td class="text-muted annual_thmonthpay" style="text-align:right;"></td>
                       </tr>
-                      <tr>
-                        <td >HMO PhilCare - Employee</td>
-                        <td class="text-muted hmo" style="text-align:right;"></td>
-                        <td class="text-muted annual_hmo" style="text-align:right;"></td>
-                      </tr>
+                      
                       <tr>
                         <td >Gross Salary</td>
                         <td class="text-muted gs" style="text-align:right;"></td>
@@ -217,6 +213,11 @@ if($_SESSION["user_type"] == 3){
                         <td >HDMF - Employee</td>
                         <td class="text-muted hdmf_employee" style="text-align:right;"></td>
                         <td class="text-muted annual_hdmf_employee" style="text-align:right;"></td>
+                      </tr>
+                      <tr class="hmophiemp">
+                        <td >HMO PhilCare - Employee</td>
+                        <td class="text-muted hmo" style="text-align:right;"></td>
+                        <td class="text-muted annual_hmo" style="text-align:right;"></td>
                       </tr>
                       <tr class="taxp">
                         <td >Tax</td>

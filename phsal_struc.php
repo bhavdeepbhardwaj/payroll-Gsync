@@ -90,6 +90,10 @@ if($_SESSION["user_type"] == 3){
                     <label class="form-label required">HMO PhilCare (Employee)</label>
                     <input type="text" class="form-control" name="hmo" id="hmo" autocomplete="off" required/>
                   </div>
+                  <div class="col-md-2">
+                    <label class="form-label required">(OTE) Incentives</label>
+                    <input type="text" class="form-control" id="tar_incentives" autocomplete="off" required />
+                  </div>
                 </div>
                 <div class="row g-2">
                   <div class="mt-4 col-12 text-center">
@@ -111,9 +115,10 @@ if($_SESSION["user_type"] == 3){
                 <div class="col-md-6">
                 <p class="h2">GLOBALSYNC PRIVATE LIMITED</p>
                 <address>
-                    Unit-2, Ground Floor,<br>
-                    Okaya Center, Sector-62,<br>
-                    Noida, UP, India 201309<br>
+                    Unit 5, Second Floor,<br>
+                    Morcilla Arcade BLDG,<br>
+                    2 Morcilla Street Poblacion<br>
+                    Pateros, Fourth District. NCR 1620<br>
                 </address>
                 <p class="candidate_name h2 mb-0"><strong></strong></p>
                 <p class="designation fs-3"><em></em></p>
@@ -262,6 +267,11 @@ if($_SESSION["user_type"] == 3){
                         <td class="text-muted earn" style="text-align:right;"></td>
                         <td class="text-muted annual_earn" style="text-align:right;"></td>
                       </tr> -->
+                      <tr class="tar_in">
+                        <td>(OTE) Incentives*</td>
+                        <td class="text-muted tar" style="text-align:right;"></td>
+                        <td class="text-muted annual_tar" style="text-align:right;"></td>
+                      </tr>
                       <tr>
                         <td><strong class="in-hand">In Hand</strong></td>
                         <td class="text-muted in_hand_fn" style="text-align:right; font-weight: 600;"></td>
@@ -273,10 +283,13 @@ if($_SESSION["user_type"] == 3){
                         <td class="text-muted annual_ctc_fn" style="text-align:right; font-weight: 600;"></td>
                       </tr>
                       <tr>
-                        <td colspan="3"><em>*No Cash Reimbursement (Availed as Service)</em></td>
+                        <!-- <td colspan="3"><em>*No Cash Reimbursement (Availed as Service)</em></td> -->
                       </tr>
                       <tr class="stack_info">
-                        <td colspan="3"><em>**Only applicable for SEC Position</em></td>
+                        <!-- <td colspan="3"><em>**Only applicable for SEC Position</em></td> -->
+                      </tr>
+                      <tr class="tar_info">
+                        <td colspan="3"><em>*On Target Achievement Incentive</em></td>
                       </tr>
                     </tbody>
                   </table>

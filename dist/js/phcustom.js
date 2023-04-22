@@ -10,6 +10,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 $("#gen_sal").click(function () {
 
+
+    var final_tar_inc = 0;
+    var tar_inc = $("#tar_incentives").val();
+    // alert(tar_inc);
+
+    if (tar_inc == null || tar_inc == "" || tar_inc == 0) {
+        $(".tar_in").hide();
+        $(".tar_info").hide();
+        $(".in-hand").text("In Hand");
+    } else {
+        $(".tar_in").show();
+        $(".tar_info").show();
+        final_tar_inc = parseInt(tar_inc);
+        $(".tar").text(addCommas(final_tar_inc));
+        // console.log(final_tar_inc);
+
+        var annual_final_tar_inc = final_tar_inc * 12;
+        $(".annual_tar").text(addCommas(annual_final_tar_inc));
+    }
+
     var sss_emp = $("#sss_employee").val();
     if (sss_emp == '') {
         sss_emp = 0;
@@ -79,7 +99,7 @@ $("#gen_sal").click(function () {
     //     $(".thmopa").hide();
     // }
     if (thmonthpay == null || thmonthpay == "" || thmonthpay == 0) {
-        
+
         thmonthpay = 0;
         // var thmonthpay = $("#th_month_pay").val();
         // var thmonthpay = gross_salary / 12;
@@ -288,7 +308,7 @@ $("#gen_sal").click(function () {
     // console.log("hdmf" + hdmf_employee);
     // console.log("tax" + tax);
     const deductTo = parseInt(sss_employee) + parseInt(phic_employee) + parseInt(hdmf_employee) + parseInt(tax) + parseInt(hmo);
-    var inHand = parseInt(gross_salary) + parseInt(thmonthpay) - parseInt(deductTo) + parseInt(hmo);
+    var inHand = parseInt(gross_salary) + parseInt(thmonthpay) - parseInt(deductTo) + parseInt(hmo) + final_tar_inc;
     $(".in_hand_fn").text(addCommas(parseFloat(inHand)));
 
     var annual_inHand = inHand * 12;
@@ -296,7 +316,7 @@ $("#gen_sal").click(function () {
 
     // CTC 
     // var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo);
-    var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo);
+    var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay) + parseInt(hmo) + final_tar_inc;
     // var ctc = parseInt(gross_salary) + parseInt(sss_employer) + parseInt(phic_employer) + parseInt(hdmf_employer) + parseInt(thmonthpay);
     // alert(ctc);
     $(".ctc_fn").text(addCommas(parseInt(ctc)));

@@ -249,87 +249,77 @@ $rowid = mysqli_fetch_assoc($resid);
                                     </div>
 
                                     <div class="row g-2 align-items-center mt-3">
-                                        <div class="col-md-6" id="">
+                                        <div class="col-md-6" id="emppp_appraisal_letter">
                                             <label class="form-label">Appraisal Letter</label>
-                                            <!-- <iframe src="<?php echo $row["appraisal_letter"]; ?>" width="100%" height="500px"></iframe> -->
-                                            <!-- <input type="file" class="form-control" name="appraisal_letter" id="emppp" value="<?php echo $row["appraisal_letter"]; ?>" /> -->
-                                            <input type="text" class="form-control" name="appraisal_letter" id="emppp_appraisal_letter" value="<?php echo $row["appraisal_letter"]; ?>" />
+                                            <iframe src="<?php echo $row["appraisal_letter"]; ?>" width="100%" height="500px"></iframe>
+                                            <input type="file" class="form-control" name="appraisal_letter" id="emppp" value="<?php echo $row["appraisal_letter"]; ?>" />
                                             <?php if (isset($file_error_msgapp)) {
                                                 echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgapp</div>";
                                             } ?>
                                         </div>
-                                        <div class="col-md-6 align-items-center pt-3" id="">
-                                            <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                            <!-- <code>Max file size allowed 500 KB.</code> -->
-                                            <code>Paste the drive Link here </code>
+                                        <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter">
+                                            <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                            <code>Max file size allowed 500 KB.</code>
                                         </div>
                                     </div>
 
                                     <div class="row g-2 align-items-center mt-3">
-                                        <div class="col-md-6" id="">
+                                        <div class="col-md-6" id="emppp_appraisal_letter1">
                                             <label class="form-label">Appraisal 1</label>
-                                            <!-- <iframe src="<?php echo $row["appraisal_1"]; ?>" width="100%" height="500px"></iframe> -->
-                                            <!-- <input type="file" class="form-control" name="appraisal_1" id="emppp" value="<?php echo $row["appraisal_1"]; ?>" /> -->
-                                            <input type="text" class="form-control" name="appraisal_1" id="emppp_appraisal_letter1" value="<?php echo $row["appraisal_1"]; ?>" />
+                                            <iframe src="<?php echo $row["appraisal_1"]; ?>" width="100%" height="500px"></iframe>
+                                            <input type="file" class="form-control" name="appraisal_1" id="emppp" value="<?php echo $row["appraisal_1"]; ?>" />
                                             <?php if (isset($file_error_msgaap1)) {
                                                 echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap1</div>";
                                             } ?>
                                         </div>
-                                        <div class="col-md-6 align-items-center pt-3" id="">
-                                            <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                            <!-- <code>Max file size allowed 500 KB.</code> -->
-                                            <code>Paste the drive Link here </code>
+                                        <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter1">
+                                            <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                            <code>Max file size allowed 500 KB.</code>
                                         </div>
                                     </div>
 
                                     <div class="row g-2 align-items-center mt-3">
-                                        <div class="col-md-6" id="">
+                                        <div class="col-md-6" id="emppp_appraisal_letter2">
                                             <label class="form-label">Appraisal 2</label>
-                                            <!-- <iframe src="<?php echo $row["appraisal_2"]; ?>" width="100%" height="500px"></iframe> -->
-                                            <!-- <input type="file" class="form-control" name="appraisal_2" id="emppp" value="<?php echo $row["appraisal_2"]; ?>" /> -->
-                                            <input type="text" class="form-control" name="appraisal_2" id="emppp_appraisal_letter2" value="<?php echo $row["appraisal_2"]; ?>" />
+                                            <iframe src="<?php echo $row["appraisal_2"]; ?>" width="100%" height="500px"></iframe>
+                                            <input type="file" class="form-control" name="appraisal_2" id="emppp" value="<?php echo $row["appraisal_2"]; ?>" />
                                             <?php if (isset($file_error_msgaap2)) {
                                                 echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap2</div>";
                                             } ?>
                                         </div>
-                                        <div class="col-md-6 align-items-center pt-3" id="">
-                                            <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                            <!-- <code>Max file size allowed 500 KB.</code> -->
-                                            <code>Paste the drive Link here </code>
+                                        <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter2">
+                                            <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                            <code>Max file size allowed 500 KB.</code>
                                         </div>
                                     </div>
 
                                     <div class="row g-2 align-items-center">
-                                        <div class="col-md-6" id="">
+                                        <div class="col-md-6" id="emppp_appraisal_letter3">
                                             <label class="form-label">Appraisal 3</label>
-                                            <!-- <iframe src="<?php echo $row["appraisal_3"]; ?>" width="100%" height="500px"></iframe> -->
-                                            <!-- <input type="file" class="form-control" name="appraisal_3" id="emppp" value="<?php echo $row["appraisal_3"]; ?>" /> -->
-                                            <input type="text" class="form-control" name="appraisal_3" id="emppp_appraisal_letter3" value="<?php echo $row["appraisal_3"]; ?>" />
+                                            <iframe src="<?php echo $row["appraisal_3"]; ?>" width="100%" height="500px"></iframe>
+                                            <input type="file" class="form-control" name="appraisal_3" id="emppp" value="<?php echo $row["appraisal_3"]; ?>" />
                                             <?php if (isset($file_error_msgaap3)) {
                                                 echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap3</div>";
                                             } ?>
                                         </div>
-                                        <div class="col-md-6 align-items-center pt-3" id="">
-                                            <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                            <!-- <code>Max file size allowed 500 KB.</code> -->
-                                            <code>Paste the drive Link here </code>
+                                        <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter3">
+                                            <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                            <code>Max file size allowed 500 KB.</code>
                                         </div>
                                     </div>
 
                                     <div class="row g-2 align-items-center">
-                                        <div class="col-md-6" id="">
+                                        <div class="col-md-6" id="emppp_appraisal_letter4">
                                             <label class="form-label">Appraisal 4</label>
-                                            <!-- <iframe src="<?php echo $row["appraisal_4"]; ?>" width="100%" height="500px"></iframe> -->
-                                            <!-- <input type="file" class="form-control" name="appraisal_4" id="emppp" value="<?php echo $row["appraisal_4"]; ?>" /> -->
-                                            <input type="text" class="form-control" name="appraisal_4" id="emppp_appraisal_letter4" value="<?php echo $row["appraisal_4"]; ?>" />
+                                            <iframe src="<?php echo $row["appraisal_4"]; ?>" width="100%" height="500px"></iframe>
+                                            <input type="file" class="form-control" name="appraisal_4" id="emppp" value="<?php echo $row["appraisal_4"]; ?>" />
                                             <?php if (isset($file_error_msgaap4)) {
                                                 echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgaap4</div>";
                                             } ?>
                                         </div>
-                                        <div class="col-md-6 align-items-center pt-3" id="">
-                                            <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                            <!-- <code>Max file size allowed 500 KB.</code> -->
-                                            <code>Paste the drive Link here </code>
+                                        <div class="col-md-6 align-items-center pt-3" id="emppp_appraisal_letter4">
+                                            <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                            <code>Max file size allowed 500 KB.</code>
                                         </div>
                                     </div>
                                 </div>
@@ -338,70 +328,62 @@ $rowid = mysqli_fetch_assoc($resid);
                             <fieldset class="form-fieldset">
                                 <legend>Employee Education</legend>
                                 <div class="row g-2 align-items-center mt-3">
-                                    <div class="col-md-6" id="">
+                                    <div class="col-md-6" id="emppp_ssc">
                                         <label class="form-label">Secondary School Certificate</label>
-                                        <!-- <iframe src="<?php echo $row["ssc"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="ssc" id="emppp" value="<?php echo $row["ssc"]; ?>" /> -->
-                                        <input type="text" class="form-control" name="ssc" id="emppp_ssc" value="<?php echo $row["ssc"]; ?>" />
+                                        <iframe src="<?php echo $row["ssc"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="ssc" id="emppp" value="<?php echo $row["ssc"]; ?>" />
                                         <?php if (isset($file_error_msgssc)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgssc</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_ssc">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
 
                                 <div class="row g-2 align-items-center mt-3">
-                                    <div class="col-md-6" id="">
+                                    <div class="col-md-6" id="emppp_hsc">
                                         <label class="form-label">Higher Secondary School Certificate</label>
-                                        <!-- <iframe src="<?php echo $row["hsc"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="hsc" id="emppp" value="<?php echo $row["hsc"]; ?>" /> -->
-                                        <input type="text" class="form-control" name="hsc" id="emppp_hsc" value="<?php echo $row["hsc"]; ?>" />
+                                        <iframe src="<?php echo $row["hsc"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="hsc" id="emppp" value="<?php echo $row["hsc"]; ?>" />
                                         <?php if (isset($file_error_msghssc)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msghssc</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_hsc">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
 
                                 <div class="row g-2 align-items-center mt-3">
-                                    <div class="col-md-6" id="">
+                                    <div class="col-md-6" id="emppp_graduation">
                                         <label class="form-label">Graduation</label>
-                                        <!-- <iframe src="<?php echo $row["graduation"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="graduation" id="emppp" value="<?php echo $row["graduation"]; ?>" /> -->
-                                        <input type="text" class="form-control" name="graduation" id="emppp_graduation" value="<?php echo $row["graduation"]; ?>" />
+                                        <iframe src="<?php echo $row["graduation"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="graduation" id="emppp" value="<?php echo $row["graduation"]; ?>" />
                                         <?php if (isset($file_error_msgg)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgg</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_graduation">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
 
                                 <div class="row g-2 align-items-center mt-3">
-                                    <div class="col-md-6" id="">
+                                    <div class="col-md-6" id="emppp_experience_relieving">
                                         <label class="form-label">Experience Relieving</label>
-                                        <!-- <iframe src="<?php echo $row["experience_relieving"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="experience_relieving" id="emppp" value="<?php echo $row["experience_relieving"]; ?>" /> -->
-                                        <input type="text" class="form-control" name="experience_relieving" id="emppp_experience_relieving" value="<?php echo $row["experience_relieving"]; ?>" />
+                                        <iframe src="<?php echo $row["experience_relieving"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="experience_relieving" id="emppp" value="<?php echo $row["experience_relieving"]; ?>" />
                                         <?php if (isset($file_error_msger)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msger</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
                             </fieldset>
@@ -574,54 +556,48 @@ $rowid = mysqli_fetch_assoc($resid);
                                     </div>
                                 </div>
 
-                                <div class="row g-2 align-content-center  mt-3">
-                                    <div class="col-md-6" id="">
+                                <div class="row g-2 align-content-center">
+                                    <div class="col-md-6" id="emppp_salary_slip">
                                         <label class="form-label">Salary Ship</label>
-                                        <!-- <iframe src="<?php echo $row["salary_slip"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="salary_slip" id="emp_salary_slip" value="<?php echo $row["salary_slip"]; ?>"/> -->
-                                        <input type="text" class="form-control" name="salary_slip" id="emppp_salary_slip" value="<?php echo $row["salary_slip"]; ?>"/>
+                                        <iframe src="<?php echo $row["salary_slip"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="salary_slip" id="emp_salary_slip" value="<?php echo $row["salary_slip"]; ?>"/>
                                         <?php if (isset($file_error_msgss)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgss</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
 
-                                <div class="row g-2 align-content-center  mt-3">
-                                    <div class="col-md-6" id="">
+                                <div class="row g-2 align-content-center">
+                                    <div class="col-md-6" id="emppp_bank_statement">
                                         <label class="form-label">Bank Statement</label>
-                                        <!-- <iframe src="<?php echo $row["bank_statement"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="bank_statement" id="emp_bank_statement" value="<?php echo $row["bank_statement"]; ?>"/> -->
-                                        <input type="text" class="form-control" name="bank_statement" id="emppp_bank_statement" value="<?php echo $row["bank_statement"]; ?>"/>
+                                        <iframe src="<?php echo $row["bank_statement"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="bank_statement" id="emp_bank_statement" value="<?php echo $row["bank_statement"]; ?>"/>
                                         <?php if (isset($file_error_msgbs)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgbs</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
 
-                                <div class="row g-2 align-content-center  mt-3">
-                                    <div class="col-md-6" id="">
+                                <div class="row g-2 align-content-center">
+                                    <div class="col-md-6" id="emppp_cancel_cheque">
                                         <label class="form-label">Cancel Cheque</label>
-                                        <!-- <iframe src="<?php echo $row["cancel_cheque"]; ?>" width="100%" height="500px"></iframe> -->
-                                        <!-- <input type="file" class="form-control" name="cancel_cheque" id="emp_cancel_cheque" value="<?php echo $row["cancel_cheque"]; ?>"/> -->
-                                        <input type="text" class="form-control" name="cancel_cheque" id="emppp_cancel_cheque" value="<?php echo $row["cancel_cheque"]; ?>"/>
+                                        <iframe src="<?php echo $row["cancel_cheque"]; ?>" width="100%" height="500px"></iframe>
+                                        <input type="file" class="form-control" name="cancel_cheque" id="emp_cancel_cheque" value="<?php echo $row["cancel_cheque"]; ?>"/>
                                         <?php if (isset($file_error_msgcc)) {
                                             echo "<div class='invalid-feedback has-error-email' style='display: inline-block;'>$file_error_msgcc</div>";
                                         } ?>
                                     </div>
-                                    <div class="col-md-6 align-items-center pt-3" id="">
-                                        <!-- <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br /> -->
-                                        <!-- <code>Max file size allowed 500 KB.</code> -->
-                                        <code>Paste the drive Link here </code>
+                                    <div class="col-md-6 align-items-center pt-3" id="emppp_experience_relieving">
+                                        <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
+                                        <code>Max file size allowed 500 KB.</code>
                                     </div>
                                 </div>
 
@@ -845,7 +821,6 @@ $rowid = mysqli_fetch_assoc($resid);
                             <input type="file" class="form-control mb-3" name="pp" id="change_pp" required />
                             <code>File format allowed .jpg .jpeg .png .gif .PNG .JPG .JPEG</code> <br />
                             <code>Max file size allowed 500 KB.</code>
-                            <!-- <code>Paste the drive Link here </code> -->
                             <input type="hidden" name="e_name" id="e_nameid" value="<?php echo $row["emp_id"]; ?>" />
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 <?php $parent_page = "emp"; ?>
-<?php $page = "bulk_sal_slip"; ?>
+<?php $page = "bulk_employee"; ?>
 <?php include "config.php"; ?>
 <?php include "header.php";
 
@@ -27,10 +27,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $spreadsheet = \PhpOffice\PhpSpreadsheet\IOFactory::load($inputFileNamePath);
         $data = $spreadsheet->getActiveSheet()->toArray();
 
+        // echo "<pre>";
+        // print_r($data);
+        // die;
+
 
         $count = "0";
         foreach ($data as $row) {
-            
+
             if (($count > 0) && (!empty($row['0']))) {
                 $emp_id                                         = $row[0];
                 $emp_name                                       = $row[1];
@@ -41,100 +45,106 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $emp_pan                                        = $row[6];
                 $emp_uan                                        = $row[7];
                 $emp_esi                                        = $row[8];
-                // $emp_pic                                        = $row[9];
-                $emp_paymode                                    = $row[9];
-                $emp_bank                                       = $row[10];
-                $emp_ifsc                                       = $row[11];
-                $emp_acc                                        = $row[12];
-                $emp_gsal                                       = $row[13];
-                $emp_food                                       = $row[14];
-                $emp_travel                                     = $row[15];
-                $emp_spl                                        = $row[16];
-                $emp_meal                                       = $row[17];
-                $emp_cab                                        = $row[18];
-                $emp_stinc                                      = $row[19];
-                $emp_inc                                        = $row[20];
-                $emp_other                                      = $row[21];
-                $emp_exitdate                                   = $row[22];
-                $emp_desp                                       = $row[23];
-                $emp_status                                     = $row[24];
-                $country_type                                   = $row[25];
-                $nick_name                                      = $row[26];
-                $line_manager                                   = $row[27];
-                $joining_month                                  = $row[28];
-                $date_of_hitting                                = $row[29];
-                $ageing                                         = $row[30];
-                $rejoing_on                                     = $row[31];
-                $date_of_confirmation                           = $row[32];
-                $exit_formalities                               = $row[33];
-                $fnf                                            = $row[34];
-                $reason_of_leaving                              = $row[35];
-                $type_of_attrition                              = $row[36];
-                $annual_ctc_in                                  = $row[37];
-                $annual_ctc_new                                 = $row[38];
-                $in_hand_salary_with_stack                      = $row[39];
-                $final_ctc_all                                  = $row[40];
-                $transport_r_a                                  = $row[41];
-                $father_name                                    = $row[42];
-                $gender                                         = $row[43];
-                $dob                                            = $row[44];
-                $marital_status                                 = $row[45];
-                $present_address_h_no                           = $row[46];
-                $lacality_building                              = $row[47];
-                $area                                           = $row[48];
-                $district                                       = $row[49];
-                $state                                          = $row[50];
-                $post_code                                      = $row[51];
-                $permanent_address_h_no                         = $row[52];
-                $per_lacality_building                          = $row[53];
-                $per_area                                       = $row[54];
-                $per_district                                   = $row[55];
-                $per_state                                      = $row[56];
-                $per_post_code                                  = $row[57];
-                $phone                                          = $row[58];
-                $mobile                                         = $row[59];
-                $primary_email                                  = $row[60];
-                $aadhaar                                        = $row[61];
-                $nominee_details                                = $row[62];
-                $relation                                       = $row[63];
-                $address                                        = $row[64];
-                $emy_contact_no                                 = $row[65];
-                $emy_contact_relation                           = $row[66];
-                $emy_contact_email                              = $row[67];
-                $no_of_bank                                     = $row[68];
-                $no_of_family_member                            = $row[69];
-                $mob_link_uan_no                                = $row[70];
-                $blood_group                                    = $row[71];
-                $performer_month                                = $row[72];
-                $verbal_warning                                 = $row[73];
-                $reason_of_verbal_warning                       = $row[74];
-                $date_of_verbal_warning                         = $row[75];
-                $no_of_warning                                  = $row[76];
-                $reason_of_warning                              = $row[77];
-                $date_of_written_warning                        = $row[78];
-                $pip_issue_date                                 = $row[79];
-                // $appraisal_letter                               = $row[81];
-                // $appraisal_1                                    = $row[82];
-                // $appraisal_2                                    = $row[83];
-                // $appraisal_3                                    = $row[84];
-                // $appraisal_4                                    = $row[85];
-                // $ssc                                            = $row[86];
-                // $hsc                                            = $row[87];
-                // $graduation                                     = $row[88];
-                // $experience_relieving                           = $row[89];
-                // $salary_slip                                    = $row[90];
-                // $bank_statement                                 = $row[91];
-                // $cancel_cheque                                  = $row[92];
+                $emp_pic                                        = $row[9];
+                $emp_paymode                                    = $row[10];
+                $emp_bank                                       = $row[11];
+                $emp_ifsc                                       = $row[12];
+                $emp_acc                                        = $row[13];
+                $emp_gsal                                       = $row[14];
+                $emp_food                                       = $row[15];
+                $emp_travel                                     = $row[16];
+                $emp_spl                                        = $row[17];
+                $emp_meal                                       = $row[18];
+                $emp_cab                                        = $row[19];
+                $emp_stinc                                      = $row[20];
+                $emp_inc                                        = $row[21];
+                $emp_other                                      = $row[22];
+                $emp_exitdate                                   = $row[23];
+                $emp_desp                                       = $row[24];
+                $emp_status                                     = $row[25];
+                $country_type                                   = $row[26];
+                $nick_name                                      = $row[27];
+                $line_manager                                   = $row[28];
+                $joining_month                                  = $row[29];
+                $date_of_hitting                                = $row[30];
+                $ageing                                         = $row[31];
+                $rejoing_on                                     = $row[32];
+                $date_of_confirmation                           = $row[33];
+                $exit_formalities                               = $row[34];
+                $fnf                                            = $row[35];
+                $reason_of_leaving                              = $row[36];
+                $type_of_attrition                              = $row[37];
+                $annual_ctc_in                                  = $row[38];
+                $annual_ctc_new                                 = $row[39];
+                $in_hand_salary_with_stack                      = $row[40];
+                $final_ctc_all                                  = $row[41];
+                $transport_r_a                                  = $row[42];
+                $father_name                                    = $row[43];
+                $gender                                         = $row[44];
+                $dob                                            = $row[45];
+                $marital_status                                 = $row[46];
+                $present_address_h_no                           = $row[47];
+                $lacality_building                              = $row[48];
+                $area                                           = $row[49];
+                $district                                       = $row[50];
+                $state                                          = $row[51];
+                $post_code                                      = $row[52];
+                $permanent_address_h_no                         = $row[53];
+                $per_lacality_building                          = $row[54];
+                $per_area                                       = $row[55];
+                $per_district                                   = $row[56];
+                $per_state                                      = $row[57];
+                $per_post_code                                  = $row[58];
+                $phone                                          = $row[59];
+                $mobile                                         = $row[60];
+                $primary_email                                  = $row[61];
+                $aadhaar                                        = $row[62];
+                $nominee_details                                = $row[63];
+                $relation                                       = $row[64];
+                $address                                        = $row[65];
+                $emy_contact_no                                 = $row[66];
+                $emy_contact_relation                           = $row[67];
+                $emy_contact_email                              = $row[68];
+                $no_of_bank                                     = $row[69];
+                $no_of_family_member                            = $row[70];
+                $mob_link_uan_no                                = $row[71];
+                $blood_group                                    = $row[72];
+                $performer_month                                = $row[73];
+                $verbal_warning                                 = $row[74];
+                $reason_of_verbal_warning                       = $row[75];
+                $date_of_verbal_warning                         = $row[76];
+                $no_of_warning                                  = $row[77];
+                $reason_of_warning                              = $row[78];
+                $date_of_written_warning                        = $row[79];
+                $pip_issue_date                                 = $row[80];
+                $appraisal_letter                               = $row[81];
+                $appraisal_1                                    = $row[82];
+                $appraisal_2                                    = $row[83];
+                $appraisal_3                                    = $row[84];
+                $appraisal_4                                    = $row[85];
+                $ssc                                            = $row[86];
+                $hsc                                            = $row[87];
+                $graduation                                     = $row[88];
+                $experience_relieving                           = $row[89];
+                $salary_slip                                    = $row[90];
+                $bank_statement                                 = $row[91];
+                $cancel_cheque                                  = $row[92];
 
-                $salQuery = "INSERT INTO gs_emp_salary (emp_id, emp_name, emp_desg, emp_mail, doj, emp_dept, emp_pan, emp_uan, emp_esi, emp_paymode, emp_bank, emp_ifsc, emp_acc, emp_gsal, emp_food, emp_travel, emp_spl, emp_meal, emp_cab, emp_stinc, emp_inc, emp_other, emp_exitdate, emp_desp, emp_status, country_type, nick_name, line_manager, joining_month, date_of_hitting, ageing, rejoing_on, date_of_confirmation, exit_formalities, fnf, reason_of_leaving, type_of_attrition, annual_ctc_in, annual_ctc_new, in_hand_salary_with_stack, final_ctc_all, transport_r_a, father_name, gender, dob, marital_status, present_address_h_no, lacality_building, area, district, state, post_code, permanent_address_h_no, per_lacality_building, per_area, per_district, per_state, per_post_code, phone, mobile, primary_email, aadhaar, nominee_details, relation, address, emy_contact_no, emy_contact_relation, emy_contact_email, no_of_bank, no_of_family_member, mob_link_uan_no, blood_group, performer_month, verbal_warning, reason_of_verbal_warning, date_of_verbal_warning, no_of_warning, reason_of_warning, date_of_written_warning, pip_issue_date) 
-                VALUES ('$emp_id', '$emp_name', '$emp_desg', '$emp_mail', '$doj', '$emp_dept', '$emp_pan', '$emp_uan', '$emp_esi', '$emp_paymode', '$emp_bank', '$emp_ifsc', '$emp_acc', '$emp_gsal', '$emp_food', '$emp_travel', '$emp_spl', '$emp_meal', '$emp_cab', '$emp_stinc', '$emp_inc', '$emp_other', '$emp_exitdate', '$emp_desp', '$emp_status', '$country_type', '$nick_name', '$line_manager', '$joining_month', '$date_of_hitting', '$ageing', '$rejoing_on', '$date_of_confirmation', '$exit_formalities', '$fnf', '$reason_of_leaving', '$type_of_attrition', '$annual_ctc_in', '$annual_ctc_new', '$in_hand_salary_with_stack', '$final_ctc_all', '$transport_r_a', '$father_name', '$gender', '$dob', '$marital_status', '$present_address_h_no', '$lacality_building', '$area', '$district', '$state', '$post_code', '$permanent_address_h_no', '$per_lacality_building', '$per_area', '$per_district', '$per_state', '$per_post_code', '$phone', '$mobile', '$primary_email', '$aadhaar', '$nominee_details', '$relation', '$address', '$emy_contact_no', '$emy_contact_relation', '$emy_contact_email', '$no_of_bank', '$no_of_family_member', '$mob_link_uan_no', '$blood_group', '$performer_month', '$verbal_warning', '$reason_of_verbal_warning', '$date_of_verbal_warning', '$no_of_warning', '$reason_of_warning', '$date_of_written_warning', '$pip_issue_date')";
+                $emp_deti = "INSERT INTO gs_employees(emp_id, emp_name, emp_desg, emp_mail, doj, emp_dept, emp_pan, emp_uan, emp_esi, emp_pic, emp_paymode, emp_bank, emp_ifsc, emp_acc, emp_gsal, emp_food, emp_travel, emp_spl, emp_meal, emp_cab, emp_stinc, emp_inc, emp_other, emp_exitdate, emp_desp, emp_status, country_type, nick_name, line_manager, joining_month, date_of_hitting, ageing, rejoing_on, date_of_confirmation, exit_formalities, fnf, reason_of_leaving, type_of_attrition, annual_ctc_in, annual_ctc_new, in_hand_salary_with_stack, final_ctc_all, transport_r_a, father_name, gender, dob, marital_status, present_address_h_no, lacality_building, area, district, state, post_code, permanent_address_h_no, per_lacality_building, per_area, per_district, per_state, per_post_code, phone, mobile, primary_email, aadhaar, nominee_details, relation, address, emy_contact_no, emy_contact_relation, emy_contact_email, no_of_bank, no_of_family_member, mob_link_uan_no, blood_group, performer_month, verbal_warning, reason_of_verbal_warning, date_of_verbal_warning, no_of_warning, reason_of_warning, date_of_written_warning, pip_issue_date, appraisal_letter, appraisal_1, appraisal_2, appraisal_3, appraisal_4, ssc, hsc, graduation, experience_relieving, salary_slip, bank_statement, cancel_cheque)
+                VALUES ('$emp_id', '$emp_name', '$emp_desg', '$emp_mail', '$doj', '$emp_dept', '$emp_pan', '$emp_uan', '$emp_esi', '$emp_pic', '$emp_paymode', '$emp_bank', '$emp_ifsc', '$emp_acc', '$emp_gsal', '$emp_food', '$emp_travel', '$emp_spl', '$emp_meal', '$emp_cab', '$emp_stinc', '$emp_inc', '$emp_other', '$emp_exitdate', '$emp_desp', '$emp_status', '$country_type', '$nick_name', '$line_manager', '$joining_month', '$date_of_hitting', '$ageing', '$rejoing_on', '$date_of_confirmation', '$exit_formalities', '$fnf', '$reason_of_leaving', '$type_of_attrition', '$annual_ctc_in', '$annual_ctc_new', '$in_hand_salary_with_stack', '$final_ctc_all', '$transport_r_a', '$father_name', '$gender', '$dob', '$marital_status', '$present_address_h_no', '$lacality_building', '$area', '$district', '$state', '$post_code', '$permanent_address_h_no', '$per_lacality_building', '$per_area', '$per_district', '$per_state', '$per_post_code', '$phone', '$mobile', '$primary_email', '$aadhaar', '$nominee_details', '$relation', '$address', '$emy_contact_no', '$emy_contact_relation', '$emy_contact_email', '$no_of_bank', '$no_of_family_member', '$mob_link_uan_no', '$blood_group', '$performer_month', '$verbal_warning', '$reason_of_verbal_warning', '$date_of_verbal_warning', '$no_of_warning', '$reason_of_warning', '$date_of_written_warning', '$pip_issue_date', '$appraisal_letter', '$appraisal_1', '$appraisal_2', '$appraisal_3', '$appraisal_4', '$ssc', '$hsc', '$graduation', '$experience_relieving', '$salary_slip', '$bank_statement', '$cancel_cheque') ON DUPLICATE KEY UPDATE emp_id ='$emp_id', emp_name = '$emp_name', emp_name = '$emp_name', emp_desg = '$emp_desg', emp_mail = '$emp_mail', doj = '$doj', emp_pan = '$emp_pan', emp_uan = '$emp_uan', emp_esi = '$emp_esi', emp_pic = '$emp_pic', emp_paymode = '$emp_paymode'";
 
-                $result = mysqli_query($link, $salQuery);
+                // $salQuery = "INSERT INTO gs_emp_salary (emp_id, emp_name, emp_desg, emp_mail, doj, emp_dept, emp_pan, emp_uan, emp_esi, emp_paymode, emp_bank, emp_ifsc, emp_acc, emp_gsal, emp_food, emp_travel, emp_spl, emp_meal, emp_cab, emp_stinc, emp_inc, emp_other, emp_exitdate, emp_desp, emp_status, country_type, nick_name, line_manager, joining_month, date_of_hitting, ageing, rejoing_on, date_of_confirmation, exit_formalities, fnf, reason_of_leaving, type_of_attrition, annual_ctc_in, annual_ctc_new, in_hand_salary_with_stack, final_ctc_all, transport_r_a, father_name, gender, dob, marital_status, present_address_h_no, lacality_building, area, district, state, post_code, permanent_address_h_no, per_lacality_building, per_area, per_district, per_state, per_post_code, phone, mobile, primary_email, aadhaar, nominee_details, relation, address, emy_contact_no, emy_contact_relation, emy_contact_email, no_of_bank, no_of_family_member, mob_link_uan_no, blood_group, performer_month, verbal_warning, reason_of_verbal_warning, date_of_verbal_warning, no_of_warning, reason_of_warning, date_of_written_warning, pip_issue_date) 
+                // VALUES ('$emp_id', '$emp_name', '$emp_desg', '$emp_mail', '$doj', '$emp_dept', '$emp_pan', '$emp_uan', '$emp_esi', '$emp_paymode', '$emp_bank', '$emp_ifsc', '$emp_acc', '$emp_gsal', '$emp_food', '$emp_travel', '$emp_spl', '$emp_meal', '$emp_cab', '$emp_stinc', '$emp_inc', '$emp_other', '$emp_exitdate', '$emp_desp', '$emp_status', '$country_type', '$nick_name', '$line_manager', '$joining_month', '$date_of_hitting', '$ageing', '$rejoing_on', '$date_of_confirmation', '$exit_formalities', '$fnf', '$reason_of_leaving', '$type_of_attrition', '$annual_ctc_in', '$annual_ctc_new', '$in_hand_salary_with_stack', '$final_ctc_all', '$transport_r_a', '$father_name', '$gender', '$dob', '$marital_status', '$present_address_h_no', '$lacality_building', '$area', '$district', '$state', '$post_code', '$permanent_address_h_no', '$per_lacality_building', '$per_area', '$per_district', '$per_state', '$per_post_code', '$phone', '$mobile', '$primary_email', '$aadhaar', '$nominee_details', '$relation', '$address', '$emy_contact_no', '$emy_contact_relation', '$emy_contact_email', '$no_of_bank', '$no_of_family_member', '$mob_link_uan_no', '$blood_group', '$performer_month', '$verbal_warning', '$reason_of_verbal_warning', '$date_of_verbal_warning', '$no_of_warning', '$reason_of_warning', '$date_of_written_warning', '$pip_issue_date')";
 
-                var_dump($salQuery);
-                echo var_dump($result);
-                // print_r($salQuery);
-                break;
+                $result = mysqli_query($link, $emp_deti);
+
+                // var_dump($emp_deti);
+                // echo var_dump($result);
+                // // print_r($salQuery);
+                // break;
+                // echo "<pre>";
+                // print_r($emp_deti);
+                // die;
                 $msg = true;
             } else {
                 $count = "1";

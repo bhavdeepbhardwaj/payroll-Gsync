@@ -141,976 +141,937 @@ if (isset($_GET["view"])) {
                 <!-- <div class="card-body text-center"> -->
                 <div class="card-body">
                   <div class="row">
+
                     <div class="col-lg-4 p-2">
                       <p class="text-muted mb-0">Employee Id</p>
                       <h3 class="m-0 mb-1"><?php echo $row['emp_id']; ?></h3>
                     </div>
-                    <div class="col-lg-4 p-2">
+
+                    <?php if ($row['doj'] != NULL && $row['doj'] != 0 && $row['doj'] != 'NA' && $row['doj'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">DOJ</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['doj']; ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <!-- <div class="col-lg-4 p-2">
                       <p class="text-muted mb-0">DOJ</p>
                       <h3 class="m-0 mb-1"><?php echo date('d-M-Y', strtotime($row['doj'])); ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Department</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_dept']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">PAN No.</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_pan']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">UAN No.</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_uan']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">ESI No.</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_esi']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Payment Mode</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_paymode']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Bank</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_bank']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">IFS Code</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_ifsc']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Account No.</p>
-                      <h3 class="m-0 mb-1"><?php echo $row['emp_acc']; ?></h3>
-                    </div>
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Gross Salary</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_gsal']); ?></h3>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Food Allowance</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_food']); ?></h3>
-                    </div>
+                    <?php if ($row['emp_dept'] != NULL && $row['emp_dept'] != 0 && $row['emp_dept'] != 'NA' && $row['emp_dept'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Department</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_dept']; ?></h3>
+                      </div>
+                    <?php } else { ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Travel Allowance</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_travel']); ?></h3>
-                    </div>
+                    <?php } ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Special Allowance</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_spl']); ?></h3>
-                    </div>
+                    <?php if ($row['emp_pan'] != NULL && $row['emp_pan'] != 0 && $row['emp_pan'] != 'NA' && $row['emp_pan'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">PAN No.</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_pan']; ?></h3>
+                      </div>
+                    <?php } else { ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Meal Service Availed</p>
-                      <?php if (!$row['emp_meal']) { ?>
-                        <h3 class="m-0 mb-1">No</h3>
-                      <?php } else { ?>
-                        <h3 class="m-0 mb-1">Yes</h3>
-                      <?php } ?>
-                    </div>
+                    <?php } ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Travel Service Availed</p>
-                      <?php if (!$row['emp_cab']) { ?>
-                        <h3 class="m-0 mb-1">No</h3>
-                      <?php } else { ?>
-                        <h3 class="m-0 mb-1">Yes</h3>
-                      <?php } ?>
-                    </div>
+                    <?php if ($row['emp_uan'] != NULL && $row['emp_uan'] != 0 && $row['emp_uan'] != 'NA' && $row['emp_uan'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">UAN No.</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_uan']; ?></h3>
+                      </div>
+                    <?php } else { ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Stack Incentive</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_stinc']); ?></h3>
-                    </div>
+                    <?php } ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Incentive</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_inc']); ?></h3>
-                    </div>
+                    <?php if ($row['emp_esi'] != NULL && $row['emp_esi'] != 0 && $row['emp_esi'] != 'NA' && $row['emp_esi'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">ESI No.</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_esi']; ?></h3>
+                      </div>
+                    <?php } else { ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Others</p>
-                      <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_other']); ?></h3>
-                    </div>
+                    <?php } ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Nick Name</p>
-                      <?php if ($row['nick_name'] != Null) { ?>
+                    <?php if ($row['emp_paymode'] != NULL && $row['emp_paymode'] != 0 && $row['emp_paymode'] != 'NA' && $row['emp_paymode'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Payment Mode</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_paymode']; ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_bank'] != NULL && $row['emp_bank'] != 0 && $row['emp_bank'] != 'NA' && $row['emp_bank'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Bank</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_bank']; ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_ifsc'] != NULL && $row['emp_ifsc'] != 0 && $row['emp_ifsc'] != 'NA' && $row['emp_ifsc'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">IFS Code</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_ifsc']; ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_acc'] != NULL && $row['emp_acc'] != 0 && $row['emp_acc'] != 'NA' && $row['emp_acc'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Account No.</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['emp_acc']; ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_gsal'] != NULL && $row['emp_gsal'] != 0 && $row['emp_gsal'] != 'NA' && $row['emp_gsal'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Gross Salary</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_gsal']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_food'] != NULL && $row['emp_food'] != 0 && $row['emp_food'] != 'NA' && $row['emp_food'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Food Allowance</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_food']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_travel'] != NULL && $row['emp_travel'] != 0 && $row['emp_travel'] != 'NA' && $row['emp_travel'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Travel Allowance</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_travel']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_spl'] != NULL && $row['emp_spl'] != 0 && $row['emp_spl'] != 'NA' && $row['emp_spl'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Special Allowance</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_spl']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_meal'] != NULL && $row['emp_meal'] != 'NA' && $row['emp_meal'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Meal Service Availed</p>
+                        <?php if (!$row['emp_meal']) { ?>
+                          <h3 class="m-0 mb-1">No</h3>
+                        <?php } else { ?>
+                          <h3 class="m-0 mb-1">Yes</h3>
+                        <?php } ?>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_cab'] != NULL && $row['emp_cab'] != 'NA' && $row['emp_cab'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Travel Service Availed</p>
+                        <?php if (!$row['emp_cab']) { ?>
+                          <h3 class="m-0 mb-1">No</h3>
+                        <?php } else { ?>
+                          <h3 class="m-0 mb-1">Yes</h3>
+                        <?php } ?>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_stinc'] != NULL && $row['emp_stinc'] != 0 && $row['emp_stinc'] != 'NA' && $row['emp_stinc'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Stack Incentive</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_stinc']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_inc'] != NULL && $row['emp_inc'] != 0 && $row['emp_inc'] != 'NA' && $row['emp_inc'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Incentive</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_inc']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['emp_other'] != NULL && $row['emp_other'] != 0 && $row['emp_other'] != 'NA' && $row['emp_other'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Others</p>
+                        <h3 class="m-0 mb-1"><?php echo "₹ " . inrFormat($row['emp_other']); ?></h3>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
+                    <?php if ($row['nick_name'] != NULL && $row['nick_name'] != 0 && $row['nick_name'] != 'NA' && $row['nick_name'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Nick Name</p>
                         <h3 class="m-0 mb-1"><?php echo $row['nick_name']; ?></h3>
-                      <?php } else { ?>
-                        <h3 class="m-0 mb-1">NA</h3>
-                      <?php } ?>
-                    </div>
+                      </div>
+                    <?php } else { ?>
 
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Line Manager</p>
-                      <?php if ($row['line_manager'] != Null) { ?>
+                    <?php } ?>
+
+                    <?php if ($row['line_manager'] != NULL && $row['line_manager'] != 0 && $row['line_manager'] != 'NA' && $row['line_manager'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Line Manager</p>
                         <h3 class="m-0 mb-1"><?php echo $row['line_manager']; ?></h3>
-                      <?php } else { ?>
-                        <h3 class="m-0 mb-1">NA</h3>
-                      <?php } ?>
-                    </div>
+                      </div>
+                    <?php } else { ?>
 
-                    <?php if ($row['joining_month'] != Null) { ?>
+                    <?php } ?>
+
+                    <?php if ($row['joining_month'] != NULL && $row['joining_month'] != 0 && $row['joining_month'] != 'NA' && $row['joining_month'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Joining Month</p>
-                        <?php if ($row['joining_month'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['joining_month']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['joining_month']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['date_of_hitting'] != Null) { ?>
+                    <?php if ($row['date_of_hitting'] != Null && $row['date_of_hitting'] != 0 && $row['date_of_hitting'] != 'NA' && $row['date_of_hitting'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">DFH <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>Date Of Hitting </p>">?</span></p>
-                        <?php if ($row['date_of_hitting'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['date_of_hitting']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['date_of_hitting']; ?></h3>
+                        <h3 class="m-0 mb-1">NA</h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['ageing'] != Null) { ?>
+                    <?php if ($row['ageing'] != Null && $row['ageing'] != 0 && $row['ageing'] != 'NA' && $row['ageing'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Ageing</p>
-                        <?php if ($row['ageing'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['ageing']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['ageing']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['rejoing_on'] != Null) { ?>
+                    <?php if ($row['rejoing_on'] != Null && $row['rejoing_on'] != 0 && $row['rejoing_on'] != 'NA' && $row['rejoing_on'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Rejoing On</p>
-                        <?php if ($row['rejoing_on'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['rejoing_on']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['rejoing_on']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['date_of_confirmation'] != Null) { ?>
+                    <?php if ($row['date_of_confirmation'] != Null && $row['date_of_confirmation'] != 0 && $row['date_of_confirmation'] != 'NA' && $row['date_of_confirmation'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">DFC <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>Date Of Confirmation </p>">?</span></p>
-                        <?php if ($row['date_of_confirmation'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['date_of_confirmation']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['date_of_confirmation']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['exit_formalities'] != Null) { ?>
+                    <?php if ($row['exit_formalities'] != Null && $row['exit_formalities'] != 0 && $row['exit_formalities'] != 'NA' && $row['exit_formalities'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Exit Formalities</p>
-                        <?php if ($row['exit_formalities'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['exit_formalities']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['exit_formalities']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['fnf'] != Null) { ?>
+                    <?php if ($row['fnf'] != Null && $row['fnf'] != 0 && $row['fnf'] != 'NA' && $row['fnf'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">FNF</p>
-                        <?php if ($row['fnf'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['fnf']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['fnf']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['reason_of_leaving'] != Null) { ?>
+                    <?php if ($row['reason_of_leaving'] != Null && $row['reason_of_leaving'] != 0 && $row['reason_of_leaving'] != 'NA' && $row['reason_of_leaving'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Reason For Leaving</p>
-                        <?php if ($row['reason_of_leaving'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['reason_of_leaving']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['reason_of_leaving']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['type_of_attrition'] != Null) { ?>
+                    <?php if ($row['type_of_attrition'] != Null && $row['type_of_attrition'] != 0 && $row['type_of_attrition'] != 'NA' && $row['type_of_attrition'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Type Of Attrition</p>
-                        <?php if ($row['type_of_attrition'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['type_of_attrition']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['type_of_attrition']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['annual_ctc_in'] != Null) { ?>
+                    <?php if ($row['annual_ctc_in'] != Null && $row['annual_ctc_in'] != 0 && $row['annual_ctc_in'] != 'NA' && $row['annual_ctc_in'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Annual CTC IN</p>
-                        <?php if ($row['annual_ctc_in'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['annual_ctc_in']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['annual_ctc_in']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['annual_ctc_new'] != Null) { ?>
+                    <?php if ($row['annual_ctc_new'] != Null && $row['annual_ctc_new'] != 0 && $row['annual_ctc_new'] != 'NA' && $row['annual_ctc_new'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Annual CTC New</p>
-                        <?php if ($row['annual_ctc_new'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['annual_ctc_new']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['annual_ctc_new']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
 
-                    <?php if ($row['in_hand_salary_with_stack'] != Null) { ?>
+                    <?php if ($row['in_hand_salary_with_stack'] != Null && $row['in_hand_salary_with_stack'] != 0 && $row['in_hand_salary_with_stack'] != 'NA' && $row['in_hand_salary_with_stack'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">IHSS <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>In Hand Salary With Stack </p>">?</span></p>
-                        <?php if ($row['in_hand_salary_with_stack'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['in_hand_salary_with_stack']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['in_hand_salary_with_stack']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['final_ctc_all'] != Null) { ?>
+                    <?php if ($row['final_ctc_all'] != Null && $row['final_ctc_all'] != 0 && $row['final_ctc_all'] != 'NA' && $row['final_ctc_all'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Final CTC All</p>
-                        <?php if ($row['final_ctc_all'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['final_ctc_all']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['final_ctc_all']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['transport_r_a'] != Null) { ?>
+                    <?php if ($row['transport_r_a'] != Null && $row['transport_r_a'] != 0 && $row['transport_r_a'] != 'NA' && $row['transport_r_a'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">TRA <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>Transport Reimbursement Applicable </p>">?</span></p>
-                        <?php if ($row['transport_r_a'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['transport_r_a']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['transport_r_a']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['father_name'] != Null) { ?>
+                    <?php if ($row['father_name'] != Null && $row['father_name'] != 0 && $row['father_name'] != 'NA' && $row['father_name'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Father Name</p>
-                        <?php if ($row['father_name'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['father_name']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['father_name']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['gender'] != Null) { ?>
+                    <?php if ($row['gender'] != Null && $row['gender'] != 0 && $row['gender'] != 'NA' && $row['gender'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Gender</p>
-                        <?php if ($row['gender'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['gender']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['gender']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['dob'] != Null && $row['dob'] != 0) { ?>
+                    <?php if ($row['dob'] != '0000-00-00' && $row['dob'] != Null && $row['dob'] != 0 && $row['dob'] != 'NA' && $row['dob'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">DOB</p>
-                        <?php if ($row['dob'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['dob']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['dob']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['marital_status'] != Null) { ?>
+                    <?php if ($row['marital_status'] != Null && $row['marital_status'] != 0 && $row['marital_status'] != 'NA' && $row['marital_status'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Marital Status</p>
-                        <?php if ($row['marital_status'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['marital_status']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['marital_status']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['present_address_h_no'] != Null) { ?>
+                    <?php if ($row['present_address_h_no'] != Null && $row['present_address_h_no'] != 0 && $row['present_address_h_no'] != 'NA' && $row['present_address_h_no'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Present Address H No.</p>
-                        <?php if ($row['present_address_h_no'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['present_address_h_no']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['present_address_h_no']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['present_address_h_no'] != Null) { ?>
+                    <?php if ($row['present_address_h_no'] != Null && $row['lacality_building'] != 0 && $row['lacality_building'] != 'NA' && $row['lacality_building'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Lacality Building</p>
-                        <?php if ($row['lacality_building'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['lacality_building']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['lacality_building']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
 
-                    <?php if ($row['area'] != Null) { ?>
+                    <?php if ($row['area'] != Null && $row['area'] != 0 && $row['area'] != 'NA' && $row['area'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Area</p>
-                        <?php if ($row['area'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['area']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['area']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['district'] != Null) { ?>
+                    <?php if ($row['district'] != Null && $row['district'] != 0 && $row['district'] != 'NA' && $row['district'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">District</p>
-                        <?php if ($row['district'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['district']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['district']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['gender'] != Null) { ?>
+                    <?php if ($row['gender'] != Null && $row['state'] != 0 && $row['state'] != 'NA' && $row['state'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">State</p>
-                        <?php if ($row['gender'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['state']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['state']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['post_code'] != Null) { ?>
+                    <?php if ($row['post_code'] != Null && $row['post_code'] != 0 && $row['post_code'] != 'NA' && $row['post_code'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Post Code</p>
-                        <?php if ($row['post_code'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['post_code']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['post_code']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['permanent_address_h_no'] != Null) { ?>
+                    <?php if ($row['permanent_address_h_no'] != Null && $row['permanent_address_h_no'] != 0 && $row['permanent_address_h_no'] != 'NA' && $row['permanent_address_h_no'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Permanent Address House No.</p>
-                        <?php if ($row['permanent_address_h_no'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['permanent_address_h_no']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['permanent_address_h_no']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['per_lacality_building'] != Null) { ?>
+                    <?php if ($row['per_lacality_building'] != Null && $row['per_lacality_building'] != 0 && $row['per_lacality_building'] != 'NA' && $row['per_lacality_building'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Permanent Lacality Building</p>
-                        <?php if ($row['per_lacality_building'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['per_lacality_building']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['per_lacality_building']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['per_area'] != Null) { ?>
+                    <?php if ($row['per_area'] != Null && $row['per_area'] != 0 && $row['per_area'] != 'NA' && $row['per_area'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Permanent Area</p>
-                        <?php if ($row['per_area'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['per_area']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['per_area']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['per_district'] != Null) { ?>
+                    <?php if ($row['per_district'] != Null && $row['per_district'] != 0 && $row['per_district'] != 'NA' && $row['per_district'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Permanent District</p>
-                        <?php if ($row['per_district'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['per_district']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['per_district']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['per_state'] != Null) { ?>
+                    <?php if ($row['per_state'] != Null && $row['per_state'] != 0 && $row['per_state'] != 'NA' && $row['per_state'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Permanent State</p>
-                        <?php if ($row['per_state'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['per_state']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['per_state']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['per_post_code'] != Null) { ?>
+                    <?php if ($row['per_post_code'] != Null && $row['per_post_code'] != 0 && $row['per_post_code'] != 'NA' && $row['per_post_code'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Permanent Post Code</p>
-                        <?php if ($row['per_post_code'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['per_post_code']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['per_post_code']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['phone'] != Null) { ?>
+                    <?php if ($row['phone'] != Null && $row['phone'] != 0 && $row['phone'] != 'NA' && $row['phone'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Phone No.</p>
-                        <?php if ($row['phone'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['phone']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['phone']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['mobile'] != Null) { ?>
+                    <?php if ($row['mobile'] != Null && $row['mobile'] != 0 && $row['mobile'] != 'NA' && $row['mobile'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Mobile No.</p>
-                        <?php if ($row['mobile'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['mobile']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['mobile']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['primary_email'] != Null) { ?>
+                    <?php if ($row['primary_email'] != Null && $row['primary_email'] != 0 && $row['primary_email'] != 'NA' && $row['primary_email'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Primary Email</p>
-                        <?php if ($row['primary_email'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['primary_email']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['primary_email']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['aadhaar'] != Null) { ?>
+                    <?php if ($row['aadhaar'] != Null && $row['aadhaar'] != 0 && $row['aadhaar'] != 'NA' && $row['aadhaar'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Aadhaar No.</p>
-                        <?php if ($row['aadhaar'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['aadhaar']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['aadhaar']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['nominee_details'] != Null) { ?>
+                    <?php if ($row['nominee_details'] != Null && $row['nominee_details'] != 0 && $row['nominee_details'] != 'NA' && $row['nominee_details'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Nominee Details</p>
-                        <?php if ($row['nominee_details'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['nominee_details']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['nominee_details']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['relation'] != Null) { ?>
+                    <?php if ($row['relation'] != Null && $row['relation'] != 0 && $row['relation'] != 'NA' && $row['relation'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Relation</p>
-                        <?php if ($row['relation'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['relation']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['relation']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['address'] != Null) { ?>
+                    <?php if ($row['address'] != Null && $row['address'] != 0 && $row['address'] != 'NA' && $row['address'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Address</p>
-                        <?php if ($row['address'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['address']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['address']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['emy_contact_no'] != Null) { ?>
+                    <?php if ($row['emy_contact_no'] != Null && $row['emy_contact_no'] != 0 && $row['emy_contact_no'] != 'NA' && $row['emy_contact_no'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Emergency Contact No.</p>
-                        <?php if ($row['emy_contact_no'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['emy_contact_no']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['emy_contact_no']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['emy_contact_relation'] != Null) { ?>
+                    <?php if ($row['emy_contact_relation'] != Null && $row['emy_contact_relation'] != 0 && $row['emy_contact_relation'] != 'NA' && $row['emy_contact_relation'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Emergency Contact Relation</p>
-                        <?php if ($row['emy_contact_relation'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['emy_contact_relation']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['emy_contact_relation']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['emy_contact_email'] != Null) { ?>
+                    <?php if ($row['emy_contact_email'] != Null && $row['emy_contact_email'] != 0 && $row['emy_contact_email'] != 'NA' && $row['emy_contact_email'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Emergency Contact Email</p>
-                        <?php if ($row['emy_contact_email'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['emy_contact_email']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['emy_contact_email']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['no_of_bank'] != Null) { ?>
+                    <?php if ($row['no_of_bank'] != Null && $row['no_of_bank'] != 0 && $row['no_of_bank'] != 'NA' && $row['no_of_bank'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Total No of Bank</p>
-                        <?php if ($row['no_of_bank'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['no_of_bank']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['no_of_bank']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['no_of_family_member'] != Null) { ?>
+                    <?php if ($row['no_of_family_member'] != Null && $row['no_of_family_member'] != 0 && $row['no_of_family_member'] != 'NA' && $row['no_of_family_member'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Total family Member</p>
-                        <?php if ($row['no_of_family_member'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['no_of_family_member']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['no_of_family_member']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['mob_link_uan_no'] != Null) { ?>
+                    <?php if ($row['mob_link_uan_no'] != Null && $row['mob_link_uan_no'] != 0 && $row['mob_link_uan_no'] != 'NA' && $row['mob_link_uan_no'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Mobile Link UAN No</p>
-                        <?php if ($row['mob_link_uan_no'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['mob_link_uan_no']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['mob_link_uan_no']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['blood_group'] != Null) { ?>
+                    <?php if ($row['blood_group'] != Null && $row['blood_group'] != 0 && $row['blood_group'] != 'NA' && $row['blood_group'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Blood Group</p>
-                        <?php if ($row['blood_group'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['blood_group']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['blood_group']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['performer_month'] != Null) { ?>
+                    <?php if ($row['performer_month'] != Null && $row['performer_month'] != 0 && $row['performer_month'] != 'NA' && $row['performer_month'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Performer Month</p>
-                        <?php if ($row['performer_month'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['performer_month']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['performer_month']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['verbal_warning'] != Null) { ?>
+                    <?php if ($row['verbal_warning'] != Null && $row['verbal_warning'] != 0 && $row['verbal_warning'] != 'NA' && $row['verbal_warning'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Verbal Warning</p>
-                        <?php if ($row['verbal_warning'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['verbal_warning']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['verbal_warning']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['reason_of_verbal_warning'] != Null) { ?>
+                    <?php if ($row['reason_of_verbal_warning'] != Null && $row['reason_of_verbal_warning'] != 0 && $row['reason_of_verbal_warning'] != 'NA' && $row['reason_of_verbal_warning'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Reason of Verbal Warning</p>
-                        <?php if ($row['reason_of_verbal_warning'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['reason_of_verbal_warning']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['reason_of_verbal_warning']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['date_of_verbal_warning'] != Null && $row['date_of_verbal_warning'] != 0) { ?>
+                    <?php if ($row['date_of_verbal_warning'] != '0000-00-00' && $row['date_of_verbal_warning'] != Null && $row['date_of_verbal_warning'] != 0 && $row['date_of_verbal_warning'] != 'NA' && $row['date_of_verbal_warning'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Date of Verbal Warning</p>
-                        <?php if ($row['date_of_verbal_warning'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['date_of_verbal_warning']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['date_of_verbal_warning']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['no_of_warning'] != Null) { ?>
+                    <?php if ($row['no_of_warning'] != Null && $row['no_of_warning'] != 0 && $row['no_of_warning'] != 'NA' && $row['no_of_warning'] != '') { ?>
                       <div class="col-lg-4 p-2">
-                        <p class="text-muted mb-0">Toatal of Warning</p>
-                        <?php if ($row['no_of_warning'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['no_of_warning']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <p class="text-muted mb-0">Total of Warning</p>
+                        <h3 class="m-0 mb-1"><?php echo $row['no_of_warning']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['reason_of_warning'] != Null) { ?>
+                    <?php if ($row['reason_of_warning'] != Null && $row['reason_of_warning'] != 0 && $row['reason_of_warning'] != 'NA' && $row['reason_of_warning'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Reason of Warning</p>
-                        <?php if ($row['reason_of_warning'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['reason_of_warning']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['reason_of_warning']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['date_of_written_warning'] != Null && $row['date_of_written_warning'] != 0) { ?>
+                    <?php if ($row['date_of_written_warning'] != '0000-00-00' && $row['date_of_written_warning'] != Null && $row['date_of_written_warning'] != 0 && $row['date_of_written_warning'] != 'NA' && $row['date_of_written_warning'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Date of Written Warning</p>
-                        <?php if ($row['date_of_written_warning'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['date_of_written_warning']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['date_of_written_warning']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['pip_issue_date'] != Null) { ?>
+                    <?php if ($row['pip_issue_date'] != Null && $row['pip_issue_date'] != 0 && $row['pip_issue_date'] != 'NA' && $row['pip_issue_date'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">PIP Issue Date</p>
-                        <?php if ($row['pip_issue_date'] != Null) { ?>
-                          <h3 class="m-0 mb-1"><?php echo $row['pip_issue_date']; ?></h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1"><?php echo $row['pip_issue_date']; ?></h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['appraisal_letter'] != Null) { ?>
+                    <?php if ($row['appraisal_letter'] != Null && $row['appraisal_letter'] != 0 && $row['appraisal_letter'] != 'NA' && $row['appraisal_letter'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal Letter</p>
-                        <?php if ($row['appraisal_letter'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_letter'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['appraisal_letter'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['appraisal_1'] != Null) { ?>
+                    <?php if ($row['appraisal_1'] != Null && $row['appraisal_1'] != 0 && $row['appraisal_1'] != 'NA' && $row['appraisal_1'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 1</p>
-                        <?php if ($row['appraisal_1'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_1'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['appraisal_1'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['appraisal_2'] != Null) { ?>
+                    <?php if ($row['appraisal_2'] != Null && $row['appraisal_2'] != 0 && $row['appraisal_2'] != 'NA' && $row['appraisal_2'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 2</p>
-                        <?php if ($row['appraisal_2'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_2'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['appraisal_2'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['appraisal_3'] != Null) { ?>
+                    <?php if ($row['appraisal_3'] != Null && $row['appraisal_3'] != 0 && $row['appraisal_3'] != 'NA' && $row['appraisal_3'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 3</p>
-                        <?php if ($row['appraisal_3'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_3'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['appraisal_3'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['appraisal_4'] != Null) { ?>
+                    <?php if ($row['appraisal_4'] != Null && $row['appraisal_4'] != 0 && $row['appraisal_4'] != 'NA' && $row['appraisal_4'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 4</p>
-                        <?php if ($row['appraisal_4'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['appraisal_4'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['appraisal_4'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['ssc'] != Null) { ?>
+                    <?php if ($row['ssc'] != Null && $row['ssc'] != 0 && $row['ssc'] != 'NA' && $row['ssc'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Secondary School Certificate</p>
-                        <?php if ($row['ssc'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['ssc'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['ssc'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['hsc'] != Null) { ?>
+                    <?php if ($row['hsc'] != Null && $row['hsc'] != 0 && $row['hsc'] != 'NA' && $row['hsc'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Higher Secondary Certificate</p>
-                        <?php if ($row['hsc'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['hsc'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['hsc'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['graduation'] != Null) { ?>
+                    <?php if ($row['graduation'] != Null && $row['graduation'] != 0 && $row['graduation'] != 'NA' && $row['graduation'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Graduation</p>
-                        <?php if ($row['graduation'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['graduation'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['graduation'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['experience_relieving'] != Null) { ?>
+                    <?php if ($row['experience_relieving'] != Null && $row['experience_relieving'] != 0 && $row['experience_relieving'] != 'NA' && $row['experience_relieving'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Experience Relieving</p>
-                        <?php if ($row['experience_relieving'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['experience_relieving'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['experience_relieving'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['salary_slip'] != Null) { ?>
+                    <?php if ($row['salary_slip'] != Null && $row['salary_slip'] != 0 && $row['salary_slip'] != 'NA' && $row['salary_slip'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Salary Slip</p>
-                        <?php if ($row['salary_slip'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['salary_slip'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['salary_slip'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['bank_statement'] != Null) { ?>
+                    <?php if ($row['bank_statement'] != Null && $row['bank_statement'] != 0 && $row['bank_statement'] != 'NA' && $row['bank_statement'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Bank Statement</p>
-                        <?php if ($row['bank_statement'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['bank_statement'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['bank_statement'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-                    <?php if ($row['cancel_cheque'] != Null) { ?>
+                    <?php if ($row['cancel_cheque'] != Null && $row['cancel_cheque'] != 0 && $row['cancel_cheque'] != 'NA' && $row['cancel_cheque'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Cancel Cheque</p>
-                        <?php if ($row['cancel_cheque'] != Null) { ?>
-                          <h3 class="m-0 mb-1">
-                            <a href="<?php echo $row['cancel_cheque'];  ?>" class="btn" target='_blank' download>
-                              <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
-                                <path d="M9 17l3 -3l-3 -3"></path>
-                                <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
-                                <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
-                              </svg>
-                              Open
-                            </a>
-                          </h3>
-                        <?php } else { ?>
-                          <h3 class="m-0 mb-1">NA</h3>
-                        <?php } ?>
+                        <h3 class="m-0 mb-1">
+                          <a href="<?php echo $row['cancel_cheque'];  ?>" class="btn" target='_blank' download>
+                            <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                              <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
+                              <path d="M9 17l3 -3l-3 -3"></path>
+                              <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                              <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
+                            </svg>
+                            Open
+                          </a>
+                        </h3>
                       </div>
+                    <?php } else { ?>
+
                     <?php } ?>
 
-
-                    <div class="col-lg-4 p-2">
-                      <p class="text-muted mb-0">Exit Date</p>
-                      <?php if ($row['emp_exitdate'] != 0000 - 00 - 00) { ?>
+                    <?php if ($row['emp_exitdate'] != 0000 - 00 - 00 && $row['cancel_cheque'] != Null && $row['cancel_cheque'] != 0 && $row['cancel_cheque'] != 'NA' && $row['cancel_cheque'] != '') { ?>
+                      <div class="col-lg-4 p-2">
+                        <p class="text-muted mb-0">Exit Date</p>
                         <h3 class="m-0 mb-1"><?php echo date('d-M-Y', strtotime($row['emp_exitdate'])); ?></h3>
-                      <?php } else { ?>
-                        <h3 class="m-0 mb-1">NA</h3>
-                      <?php } ?>
-                    </div>
+                      </div>
+                    <?php } else { ?>
+
+                    <?php } ?>
+
                   </div>
                 </div>
                 <!-- </div> -->

@@ -88,11 +88,11 @@ $emp_esi = $emp_row['emp_uan'];
 // echo "</pre>";
 
 ?>
-<!-- <style>
+<style>
     *{
         font-size: 12px;
     }
-</style> -->
+</style>
 
 <div class="page-wrapper">
     <div class="container-xl">

@@ -190,7 +190,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
         } else if ($_SESSION["user_type"] == 1 && $_SESSION["country_type"] == 'In') {
-            if ($_POST['country_type'] == 'In'){
+            if ($_POST['country_type'] == 'In') {
                 foreach ($data as $row) {
                     if (($count > 0) && (!empty($row['0']))) {
                         $sal_only_month = $_POST["pay_month"];
@@ -277,8 +277,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $otp_install =                  $row['78'];
                         $otp_inc_install =              $row['79'];
                         $country_type =                 $_POST['country_type'];
-    
-    
+
+
                         $salQuery = "INSERT INTO gs_emp_salary (emp_sal_id,month_yr,employee_id,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,aa,ab,ac,ad,ae,pre_leave_bal,total_ab,total_upl,total_p,total_hd,wo_ph,late_coming,hd_bcoz_late,leaves_adjusted,sal_month_basic,sal_month_hra,sal_month_sa,sal_month_oa,emp_pf_cont,empr_pf_cont,emp_esic_cont,empr_esic_cont,daily_pay,leave_bal_at_start,fix_sal_month_pay,tds_deduction,penalty_adj,sandwhich_leave_deduction,transport,food,other_inc_dues,arrears,inc_refferal,pre_month_qualified_app_ach,qualified_percentage_pre_month,inc_qualified,spl_allowance,kw_installed,install_inc,stack_inc,adjustment,net_salary,status,inc_amt,clawback,inc,deductions,earnings,transport_redeem,food_redeem,adv_adj,otp_install,otp_inc_install,country_type) 
                                         VALUES ('$final_sal_id','$sal_month','$empid','$a','$b','$c','$d','$e','$f','$g','$h','$i','$j','$k','$l','$m','$n','$o','$p','$q','$r','$s','$t','$u','$v','$w','$x','$y','$z','$aa','$ab','$ac','$ad','$ae','$pre_leave_bal','$total_ab','$total_upl','$total_p','$total_hd','$wo_ph','$late_coming','$hd_bcoz_late','$leaves_adjusted','$sal_month_basic','$sal_month_hra','$sal_month_sa','$sal_month_oa','$emp_pf_cont','$empr_pf_cont','$emp_esic_cont','$empr_esic_cont','$daily_pay','$leave_bal_at_start','$fix_sal_month_pay','$tds_deduction','$penalty_adj','$sandwhich_leave_deduction','$transport','$food','$other_inc_dues','$arrears','$inc_refferal','$pre_month_qualified_app_ach','$qualified_percentage_pre_month','$inc_qualified','$spl_allowance','$kw_installed','$install_inc','$stack_inc','$adjustment','$net_salary','$status','$inc_amt','$clawback','$inc','$deduction','$earning','$transport_redeem','$food_redeem','$adv_adj','$otp_install','$otp_inc_install','$country_type') 
                                         ON DUPLICATE KEY UPDATE month_yr ='$sal_month',employee_id = '$empid',a ='$a',b = '$b',c ='$c',d = '$d',e ='$e',f = '$f',g ='$g',h = '$h',i ='$i',j = '$j',k ='$k',l = '$l',m ='$m',n = '$n',o ='$o',p = '$p',q ='$q',r = '$r',s ='$s',t = '$t',u ='$u',v = '$v',w ='$w',x = '$x',y ='$y',z = '$z',aa ='$aa',ab = '$ab',ac ='$ac',ad = '$ad',ae ='$ae',pre_leave_bal = '$pre_leave_bal',total_ab ='$total_ab',total_upl = '$total_upl',total_p ='$total_p',total_hd = '$total_hd',wo_ph ='$wo_ph',late_coming = '$late_coming',hd_bcoz_late ='$hd_bcoz_late',leaves_adjusted = '$leaves_adjusted',sal_month_basic ='$sal_month_basic',sal_month_hra = '$sal_month_hra',sal_month_sa ='$sal_month_sa',sal_month_oa = '$sal_month_oa',emp_pf_cont ='$emp_pf_cont',empr_pf_cont = '$empr_pf_cont',emp_esic_cont ='$emp_esic_cont',empr_esic_cont = '$empr_esic_cont',daily_pay ='$daily_pay',leave_bal_at_start = '$leave_bal_at_start',fix_sal_month_pay ='$fix_sal_month_pay',tds_deduction = '$tds_deduction',penalty_adj ='$penalty_adj',sandwhich_leave_deduction = '$sandwhich_leave_deduction',transport ='$transport',food ='$food',other_inc_dues = '$other_inc_dues',arrears ='$arrears',inc_refferal = '$inc_refferal',pre_month_qualified_app_ach ='$pre_month_qualified_app_ach',qualified_percentage_pre_month = '$qualified_percentage_pre_month',inc_qualified ='$inc_qualified',spl_allowance = '$spl_allowance',kw_installed ='$kw_installed',install_inc = '$install_inc',stack_inc ='$stack_inc',adjustment ='$adjustment',net_salary = '$net_salary',status ='$status',inc_amt = '$inc_amt',clawback ='$clawback',inc = '$inc',deductions = '$deduction',earnings = '$earning',transport_redeem = '$transport_redeem',food_redeem = '$food_redeem', adv_adj = '$adv_adj',otp_install = '$otp_install', otp_inc_install = '$otp_inc_install', country_type = '$country_type'";
@@ -288,7 +288,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $count = "1";
                     }
                 }
-            } else if($_POST['country_type'] == 'Ph') {
+            } else if ($_POST['country_type'] == 'Ph') {
                 foreach ($data as $row) {
                     if (($count > 0) && (!empty($row['0']))) {
                         $sal_only_month = $_POST["pay_month"];
@@ -306,8 +306,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $ph_hdmf_emy =                              $row['9'];
                         $ph_hmo_emp =                               $row['10'];
                         $country_type =                 $_POST['country_type'];
-    
-    
+
+
                         $salQuery = "INSERT INTO gs_emp_salary (emp_sal_id,month_yr,employee_id,ph_gross_salary,ph_thirteent_month_pay,ph_tax,ph_sss_emp,ph_sss_emy,ph_phic_emp,ph_phic_emy,ph_hdmf_emp,ph_hdmf_emy,ph_hmo_emp,country_type) 
                                         VALUES ('$final_sal_id','$sal_month','$empid','$ph_gross_salary','$ph_thirteent_month_pay','$ph_tax','$ph_sss_emp','$ph_sss_emy','$ph_phic_emp','$ph_phic_emy','$ph_hdmf_emp','$ph_hdmf_emy','$ph_hmo_emp','$country_type') 
                                         ON DUPLICATE KEY UPDATE month_yr ='$sal_month',employee_id = '$empid',ph_gross_salary ='$ph_gross_salary',ph_thirteent_month_pay = '$ph_thirteent_month_pay',ph_tax ='$ph_tax',ph_sss_emp = '$ph_sss_emp',ph_sss_emy ='$ph_sss_emy',ph_phic_emp = '$ph_phic_emp',ph_phic_emy ='$ph_phic_emy',ph_hdmf_emp = '$ph_hdmf_emp',ph_hdmf_emy ='$ph_hdmf_emy',ph_hmo_emp = '$ph_hmo_emp', country_type = '$country_type'";
@@ -355,27 +355,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h3 class="card-title">Upload Attendance Excel Sheet</h3>
                             <div class="card-actions">
                                 <?php if ($_SESSION["country_type"] == 'In' && $_SESSION['user_type'] == '2') { ?>
-                                <a href="static/payroll-in.xlsx" class="btn" target='__blank'>
-                                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
-                                        <polyline points="7 11 12 16 17 11"></polyline>
-                                        <line x1="12" y1="4" x2="12" y2="16"></line>
-                                    </svg>
-                                    Download Sample File
-                                </a>
+                                    <a href="static/payroll-in.xlsx" class="btn" target='__blank'>
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                                            <polyline points="7 11 12 16 17 11"></polyline>
+                                            <line x1="12" y1="4" x2="12" y2="16"></line>
+                                        </svg>
+                                        Download Sample File
+                                    </a>
                                 <?php  } else if ($_SESSION["country_type"] == 'Ph' && $_SESSION['user_type'] == '2') { ?>
                                     <a href="static/payroll-ph.xlsx" class="btn" target='__blank'>
-                                    <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
-                                        <polyline points="7 11 12 16 17 11"></polyline>
-                                        <line x1="12" y1="4" x2="12" y2="16"></line>
-                                    </svg>
-                                    Download Sample File
-                                </a>
+                                        <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path>
+                                            <polyline points="7 11 12 16 17 11"></polyline>
+                                            <line x1="12" y1="4" x2="12" y2="16"></line>
+                                        </svg>
+                                        Download Sample File
+                                    </a>
                                 <?php } ?>
                             </div>
                         </div>

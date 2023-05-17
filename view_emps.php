@@ -49,7 +49,8 @@ if ($_SESSION["user_type"] == 3) {
                                 // $sql = "SELECT id, emp_id, emp_name, emp_desg, emp_dept, doj, emp_status FROM gs_employees";
 
                                 if ($_SESSION["country_type"] == 'In') {
-                                    $sql = "SELECT id, emp_id, emp_name, emp_desg, emp_dept, doj, emp_status FROM gs_employees WHERE country_type = 'In'";
+                                    
+                                    $sql = "SELECT id, emp_id, emp_name, emp_desg, emp_dept, doj, emp_status FROM gs_employees WHERE country_type = 'In' AND emp_status = '1'";
                                     $res = mysqli_query($link, $sql);
 
                                 // $row = mysqli_fetch_row($res);

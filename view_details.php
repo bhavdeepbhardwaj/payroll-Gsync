@@ -353,7 +353,6 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">DFH <span class="form-help" data-bs-toggle="popover" data-bs-placement="top" data-bs-html="true" data-bs-content="<p>Date Of Hitting </p>">?</span></p>
                         <h3 class="m-0 mb-1"><?php echo $row['date_of_hitting']; ?></h3>
-                        <h3 class="m-0 mb-1">NA</h3>
                       </div>
                     <?php } else { ?>
 
@@ -815,9 +814,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal Letter</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['appraisal_letter'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['appraisal_letter']; ?></h3>
+                          <!-- <a href="<?php echo $row['appraisal_letter'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -825,7 +825,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -836,9 +836,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 1</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['appraisal_1'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['appraisal_1']; ?></h3>
+                          <!-- <a href="<?php echo $row['appraisal_1'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -846,7 +847,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -857,9 +858,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 2</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['appraisal_2'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['appraisal_2']; ?></h3>
+                          <!-- <a href="<?php echo $row['appraisal_2'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -867,7 +869,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -878,9 +880,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 3</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['appraisal_3'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['appraisal_3']; ?></h3>
+                          <!-- <a href="<?php echo $row['appraisal_3'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -888,7 +891,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -899,9 +902,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Appraisal 4</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['appraisal_4'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['appraisal_4']; ?></h3>
+                          <!-- <a href="<?php echo $row['appraisal_4'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -909,7 +913,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -920,9 +924,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Secondary School Certificate</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['ssc'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['ssc']; ?></h3>
+                          <!-- <a href="<?php echo $row['ssc'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -930,7 +935,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -941,9 +946,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Higher Secondary Certificate</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['hsc'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['hsc']; ?></h3>
+                          <!-- <a href="<?php echo $row['hsc'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -951,7 +957,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -962,9 +968,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Graduation</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['graduation'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['graduation']; ?></h3>
+                          <!-- <a href="<?php echo $row['graduation'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -972,7 +979,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -983,9 +990,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Experience Relieving</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['experience_relieving'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['experience_relieving']; ?></h3>
+                          <!-- <a href="<?php echo $row['experience_relieving'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -993,7 +1001,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -1004,9 +1012,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Salary Slip</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['salary_slip'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['salary_slip']; ?></h3>
+                          <!-- <a href="<?php echo $row['salary_slip'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -1014,7 +1023,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -1025,9 +1034,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Bank Statement</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['bank_statement'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['bank_statement']; ?></h3>
+                          <!-- <a href="<?php echo $row['bank_statement'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -1035,7 +1045,7 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
@@ -1046,9 +1056,10 @@ if (isset($_GET["view"])) {
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Cancel Cheque</p>
                         <h3 class="m-0 mb-1">
-                          <a href="<?php echo $row['cancel_cheque'];  ?>" class="btn" target='_blank' download>
+                        <h3 class="m-0 mb-1"><?php echo $row['cancel_cheque']; ?></h3>
+                          <!-- <a href="<?php echo $row['cancel_cheque'];  ?>" class="btn" target='_blank' download> -->
                             <!-- Download SVG icon from http://tabler-icons.io/i/plus -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-symlink" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                               <path d="M4 21v-4a3 3 0 0 1 3 -3h5"></path>
                               <path d="M9 17l3 -3l-3 -3"></path>
@@ -1056,14 +1067,14 @@ if (isset($_GET["view"])) {
                               <path d="M5 11v-6a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-9.5"></path>
                             </svg>
                             Open
-                          </a>
+                          </a> -->
                         </h3>
                       </div>
                     <?php } else { ?>
 
                     <?php } ?>
 
-                    <?php if ($row['emp_exitdate'] != 0000 - 00 - 00 && $row['cancel_cheque'] != Null && $row['cancel_cheque'] != 0 && $row['cancel_cheque'] != 'NA' && $row['cancel_cheque'] != '') { ?>
+                    <?php if ($row['emp_exitdate'] != 0000 - 00 - 00 && $row['emp_exitdate'] != Null && $row['emp_exitdate'] != 0 && $row['emp_exitdate'] != 'NA' && $row['emp_exitdate'] != '') { ?>
                       <div class="col-lg-4 p-2">
                         <p class="text-muted mb-0">Exit Date</p>
                         <h3 class="m-0 mb-1"><?php echo date('d-M-Y', strtotime($row['emp_exitdate'])); ?></h3>
